@@ -1,3 +1,2 @@
 
-This is a website online deployment for quality assurance purposes, and inputs from the would be consumers.
-Osadolor, Aise
+This is an online deployment of a website for quality assurance purposes, and inputs from the would-be consumers.
