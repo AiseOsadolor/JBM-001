@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+  <html lang="en-NG">
+    <head>
+        <title>Jesus Breeds Ministries</title>
+        <link rel="icon" type="image/x-icon" href="img/Jesus Breeds Logo (1).ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Jesus Breeds Ministries, Jesus, Breeds, Ministries, God, Faith, Church, Community">
+        <meta charset="UTF-8">
+        <meta name="description" content="Jesus Breeds Ministries - A place where God's power moves like never before and a ground where expectations run into manifestations.">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <style>
+           .search-box {
+                width: 25%;
+                max-width: 400px;
+                float: right;
+                box-sizing: border-box;
+                border: 1px none transparent;
+                border-radius: 20px;
+                margin-right: 0px;
+                position: relative;
+            }
+            .search-button {
+                position: absolute;
+                color: gray;
+                right: 160px;
+                top: 0;
+                bottom: 0;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                padding: 10px;
+            }
+            #paystack-button {
+                background-color: #a8ebad;
+                color: rgb(0, 0, 0);
+                font-weight: bold;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 30px;
+                cursor: pointer;
+            }
+            #paystack-button:hover {
+                background-color:#a8ebad;
+                color:#fdfdfd;
+            }
+            .section div {
+                position: relative;
+                padding: 10px;
+                text-align: center;
+                margin: 0 auto;
+                max-width: 100%;
+            }
+            #donation-form label, label[for] {
+                position: absolute;
+                left: 390px;
+                font-weight: bold;
+                margin-bottom: 8px;
+                display: block;
+                color: #333;
+                
+            }
+            input[type="text"], input[type="tel"], input[type="email"], input[type="number"] {
+                width: 50%;
+                max-width: 80%;
+                padding: 15px;
+                border: none;
+                border-radius: 20px;
+                outline: none;
+            }
+          
+           .main-nav li a {
+                float: left;
+                border: 1px none grey;
+                padding: 10px;
+                border-radius: 20px;
+                color: goldenrod;
+                text-decoration: none;
+            }
+            
+            .main-nav li a:hover {
+                background-color: transparent;
+                color: white;
+            }
+
+            .section div p {
+                line-height: 2.0;
+                margin: 10px 0;
+                color: #333;
+                font-weight: 400;
+                margin-left: 3%;
+                margin-right: 3%;
+                margin-top: 2%;
+                margin-bottom: 20px;
+                font-family: Helvetica, Verdana, sans-serif;
+                font-size: 1.2em;
+                text-wrap: wrap;
+                text-align-last: center;
+                text-align: justify;
+                
+            }
+            .section{
+                position: relative;
+            }
+            main div p.heading-text {
+                font-size: 1.5em;
+                font-weight: bold;
+                font-family: Garamond, Georgia, serif;
+                color: #333;
+                position: absolute;
+                right: 50%;
+                top: 10px;
+
+                transform: translateX(50%);
+            }
+           
+            body {
+                font-family: Helvetica, Verdana,sans-serif;
+                background-color: #E8F5E9;
+                margin: 0;
+                padding: 0;
+            }
+            .footer-links, .social-links{
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+            .footer-links a {
+                color: goldenrod;
+                text-decoration: none;
+            }
+            .footer-links a:hover {
+                text-decoration: underline;
+                color: violet;
+            }
+            .footer-div {
+                background-color: rgb(93, 98, 94, 0.9);
+                color: #ffffff;
+                padding: 10px 0;
+                text-align: center;
+                position: static;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+            nav {
+                background-color: #5d625e;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+            }         
+            
+            /* Dark mode style */
+            body.dark-mode {
+                background-color: #181a1b !important;
+                color: #e0e0e0 !important;
+            }
+            body.dark-mode nav,
+            body.dark-mode .footer-div {
+                background-color: #444 !important;
+                color: #e0e0e0 !important;
+            }
+            body.dark-mode label[for] {
+                color: #ffd700 !important;
+            }
+            body.dark-mode .section,
+            body.dark-mode #contact-details,
+            body.dark-mode #contact-form,
+            body.dark-mode #comment-form {
+                background-color: #23272b !important;
+                color: #e0e0e0 !important;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+            body.dark-mode .section p,
+            body.dark-mode #contact-details p,
+            body.dark-mode #contact-form label,
+            body.dark-mode #comment-form label {
+                color: #ffd700 !important;
+            }
+            body.dark-mode input,
+            body.dark-mode textarea {
+                background: #23272b !important;
+                color: #e0e0e0 !important;
+                border: 1px solid #444 !important;
+            }
+            body.dark-mode .main-nav li a,
+            body.dark-mode .footer-links a {
+                color: #ffd700 !important;
+            }
+            body.dark-mode .main-nav li a:hover,
+            body.dark-mode .footer-links a:hover {
+                color: #fff !important;
+            }
+            body.dark-mode button,
+            body.dark-mode .send-message-button,
+            body.dark-mode .send-comment-button {
+                background-color: #333 !important;
+                color: #ffd700 !important;
+                border: 1px solid #ffd700 !important;
+            }
+            body.dark-mode button:hover,
+            body.dark-mode .send-message-button:hover,
+            body.dark-mode .send-comment-button:hover {
+                background-color: #222 !important;
+                color: #fff !important;
+            }
+            body.dark-mode a {
+                color: #ffd700 !important;
+            }
+            body.dark-mode a:hover {
+                color: #fff !important;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Dark Mode Toggle Button -->
+        <button id="darkModeToggle" style="position:fixed;top:28px;right:12px;z-index:2000;border:none;background: #5d625e;color:#fff;cursor:pointer;">
+            <i class="fas fa-moon"></i>
+    </button><!-- Navigation Menu -->
+        <header>
+            <nav>
+                <strong>
+                    <div class="main-nav">
+                        <ul style="font-size: 16px;">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="reach-us.html">Reach Us</a></li>
+                                <li><a href="sow-a-seed.html">Sow a Seed</a></li>
+                        </ul>
+                    </div>
+                        <!-- Search Box -->
+                        <li class="search-box" style="list-style-type: none; font-size: 16px;">
+                            <form action="search-results.html" method="get">
+                                <input id="tnb-google-search-input" type="text" placeholder="Search..."max-width="100%" name="search" required>
+                                <button type="submit" class="search-button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </strong>
+            </nav>
+        </header>
+        <main class="section">
+        <br><br> 
+            <div> <br>
+        <p class="heading-text"> Welcome to the <i>Sow a Seed</i> page of Jesus Breeds Ministries. </p><br> <br> 
+            <p>We invite you to join us in our mission to spread the love and teachings of Jesus Christ. Our ministry is dedicated to making a positive impact in the lives of individuals and communities through faith, hope, and charity. By sowing a seed, you are not just making a financial contribution; you are planting seeds of faith that would grow into something beautiful and transformative. Your support enables us to continue our outreach programmes, community services, and various initiatives that aim to uplift and inspire those who need Christ</p>
+               
+            </div>
+        <div>
+        <!-- Donation Form -->
+        <form id="donation-form">
+            <label for="full-name">Full Name:</label> <br> <br>
+            <input type="text" id="full-name" placeholder="Enter your full name" required><br><br>
+
+            <label for="email">Email Address:</label> <br> <br>
+            <input type="email" id="email" placeholder="Enter your email" required><br><br>
+
+            <label for="phone">Phone Number:</label> <br> <br>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required><br><br>
+
+            <label for="amount">Amount (NGN):</label> <br> <br>
+            <input type="number" id="amount" placeholder="Enter amount" required><br><br>
+
+                        <button type="button" id="paystack-button">
+                <i class="fas fa-seedling" style="margin-right:6px;"></i> Sow
+            </button>
+        </form>
+        <br>
+        </div>
+       </main> <br><br>
+        <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/cf0f5e063f.js" crossorigin="anonymous"></script>
+        <footer>
+          <div class="footer-div">
+                <p class="social-links">
+                    <a href="https://www.facebook.com/JesusBreedsMinistries/" target="_blank" class="facebook">
+                        <i class="fab fa-facebook" style="color: #3b5998"></i>
+                    </a>
+                    <a href="https://www.youtube.com/yourchannel" target="_blank" class="youtube">
+                        <i class="fab fa-youtube" style="color:rgb(240, 30, 45)"></i>
+                    </a>
+                    <span>
+                    <p class="footer-links">
+                        <a href="index.html" class="footer-home">Home</a>
+                        <a href="about-us.html">About Us</a>
+                        <a href="reach-us.html">Reach Us</a>
+                        <a href="sow-a-seed.html">Sow a Seed</a>
+                    </p>
+                    </span>
+                    <p class="copyright">
+                        &copy; 2025 Jesus Breeds Ministries.  All rights reserved.
+                    </p>
+                </p>
+          </div>
+        </footer>
+    </body>
+</html>

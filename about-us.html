@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <html lang="en-NG">
+    <head>
+        <title>Jesus Breeds Ministries</title>
+        <link rel="icon" type="image/x-icon" href="img/Jesus Breeds Logo (1).ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Jesus Breeds Ministries, Jesus, Breeds, Ministries, God, Faith, Church, Community">
+        <meta charset="UTF-8">
+        <meta name="description" content="Jesus Breeds Ministries - A place where God's power moves like never before and a ground where expectations run into manifestations.">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script>
+        </script>
+
+        <style>
+           .search-box {
+                width: 20%;
+                float: right;
+                box-sizing: border-box;
+                border: 2px none transparent;
+                padding: 5px;
+                margin-right: 10px;
+                position: relative;
+            }
+            .search-button {
+                position: absolute;
+                color: gray;
+                right: 40px;
+                top: 0;
+                bottom: 0;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                padding: 10px;
+            }
+            main {
+                position: relative;
+                padding: 20px;
+                margin-top: 10px; /* Adjust for fixed nav height */
+            }
+            main div {
+                text-align: center;
+                margin: 0 auto;
+                max-width: 100%;
+            }
+            input[type="text"] {
+                width: 80%;
+                padding: 10px;
+                border: none;
+                border-radius: 20px;
+                outline: none;
+            }
+
+           .main-nav li a {
+                float: left;
+                border: 1px none grey;
+                padding: 10px;
+                border-radius: 20px;
+                color: goldenrod;
+                text-decoration: none;
+            }
+            
+            .main-nav li a:hover {
+                background-color: transparent;
+                color: white;
+              }
+
+            body {
+                font-family: Helvetica, Verdana,sans-serif;
+                background-color: #E8F5E9;
+            }
+            .footer-links, .social-links{
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+            .footer-links a {
+                color: goldenrod;
+                text-decoration: none;
+            }
+            .footer-links a:hover {
+                text-decoration: underline;
+                color: violet;
+            }
+            .footer-div {
+                background-color: rgb(93, 98, 94, 0.9);
+                color: #ffffff;
+                padding: 10px 0;
+                text-align: center;
+                position: relative;
+
+            }
+            nav {
+                background-color: #5d625e;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+            }
+            section div p {
+                padding: 40px;
+                margin: 20px;
+                border-radius: 10px;
+                line-height: 1.5;
+                text-wrap: wrap;
+                text-align-last: center;
+                font-size: 1.2em;
+    
+            }
+            h2 {
+                color: goldenrod;
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+            #about-us, #our-founder, #our-vision {
+                position: relative;
+                text-wrap: wrap;
+                
+            }
+            img {
+               
+                position:absolute;
+                right: 50%;
+                transform: translateX(50%);
+                margin: 20px;
+                z-index: -1;
+               
+            }
+/* Dark mode style */
+            body.dark-mode {
+                background-color: #181a1b !important;
+                color: #e0e0e0 !important;
+            }
+            body.dark-mode nav,
+            body.dark-mode .footer-div {
+                background-color: #444 !important;
+                color: #e0e0e0 !important;
+            }
+            body.dark-mode label[for] {
+                color: #ffd700 !important;
+            }
+            body.dark-mode .section,
+            body.dark-mode #contact-details,
+            body.dark-mode #contact-form,
+            body.dark-mode #comment-form {
+                background-color: #23272b !important;
+                color: #e0e0e0 !important;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+            body.dark-mode .section p,
+            body.dark-mode #contact-details p,
+            body.dark-mode #contact-form label,
+            body.dark-mode #comment-form label {
+                color: #ffd700 !important;
+            }
+            body.dark-mode input,
+            body.dark-mode textarea {
+                background: #23272b !important;
+                color: #e0e0e0 !important;
+                border: 1px solid #444 !important;
+            }
+            body.dark-mode .main-nav li a,
+            body.dark-mode .footer-links a {
+                color: #ffd700 !important;
+            }
+            body.dark-mode .main-nav li a:hover,
+            body.dark-mode .footer-links a:hover {
+                color: #fff !important;
+            }
+            body.dark-mode button,
+            body.dark-mode .send-message-button,
+            body.dark-mode .send-comment-button {
+                background-color: #333 !important;
+                color: #ffd700 !important;
+                border: 1px solid #ffd700 !important;
+            }
+            body.dark-mode button:hover,
+            body.dark-mode .send-message-button:hover,
+            body.dark-mode .send-comment-button:hover {
+                background-color: #222 !important;
+                color: #fff !important;
+            }
+            body.dark-mode a {
+                color: #ffd700 !important;
+            }
+            body.dark-mode a:hover {
+                color: #fff !important;
+            }
+                     
+        </style>
+    </head>
+     <!-- Dark Mode Toggle Button -->
+        <button id="darkModeToggle" style="position:fixed;top:28px;right:6px;z-index:2000;border:none;background: #5d625e;color:#fff;cursor:pointer;">
+            <i class="fas fa-moon"></i>
+    </button>
+    <body>
+        <!-- Navigation Menu -->
+        <header>
+            <nav>
+                <strong>
+                    <div class="main-nav">
+                        <ul style="font-size: 16px;">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="reach-us.html">Reach Us</a></li>
+                                <li><a href="sow-a-seed.html">Sow a Seed</a></li>
+                        </ul>
+                    </div>
+                        <!-- Search Box -->
+                        <li class="search-box" style="list-style-type: none; font-size: 16px;">
+                            <form action="search-results.html" method="get">
+                                <input id="tnb-google-search-input" type="text" placeholder="Search..." width="100%" name="search" required>
+                                <button type="submit" class="search-button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </strong>
+            </nav>
+        </header> 
+        <!-- Main Content -->
+       <br><br>
+       <section> <br><br>
+        <div id="about-us">
+            <h2>About Us</h2>
+            <p>
+                Jesus Breeds is a non-profit organization dedicated to spreading the message of love, hope, and faith through various community outreach programs and initiatives. Our mission is to empower individuals and families to lead fulfilling lives rooted in Christian values.
+            </p>
+        </div>
+
+        <!-- Our Founder Section -->
+        <div id="our-founder">
+            <div><h2>Our Founder</h2>
+            <img src="img/Bishop.png" width="200" height="200" style="border-radius: 10px;" alt="Bishop Eddy Omoruyi" title="Bishop Eddy Omoruyi">
+            </div> <br> <br> <br> <br> <br> <br> <br> <br>
+            <p>
+               <br> Jesus Breeds was founded in 1996 by <b>Bishop Eddy Omoruyi </b> , a visionary leader with a passion for spreading the gospel and transforming lives.
+                With over 20 years of ministry experience, Bishop Omoruyi has dedicated his life to serving God and empowering communities through faith, love, and service.
+            </p>
+        </div>
+        <!-- Our Vision Section -->
+        <div id="our-vision">
+            <h2>Our Vision</h2>
+            <p>
+                Our vision is to create a world where every individual experiences the transformative power of Jesus Christ. We strive to build a community that reflects God's love and grace, fostering spiritual growth and meaningful connections among all people.
+            </p>
+            <h2>Our Statement of Faith</h2>
+            <p>
+                We believe in the authority of Scripture, the power of prayer, and the importance of community. Our faith is rooted in the teachings of Jesus Christ, and we are committed to living out His message of love and redemption.
+            </p>
+        </div>
+        </section>
+        <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/cf0f5e063f.js" crossorigin="anonymous"></script>
+     <footer>
+          <div class="footer-div">
+                <p class="social-links">
+                    <a href="https://www.facebook.com/JesusBreedsMinistries/" target="_blank" class="facebook">
+                        <i class="fab fa-facebook" style="color: #3b5998"></i>
+                    </a>
+                    <a href="https://www.youtube.com/yourchannel" target="_blank" class="youtube">
+                        <i class="fab fa-youtube" style="color:rgb(240, 30, 45)"></i>
+                    </a>
+                    <span>
+                    <p class="footer-links">
+                        <a href="index.html" class="footer-home">Home</a>
+                        <a href="about-us.html">About Us</a>
+                        <a href="reach-us.html">Reach Us</a>
+                        <a href="sow-a-seed.html">Sow a Seed</a>
+                    </p>
+                    </span>
+                    <p class="copyright">
+                        &copy; 2025 Jesus Breeds Ministries.  All rights reserved.
+                    </p>
+                </p>
+          </div>
+        </footer>
+    </body>
+</html>
