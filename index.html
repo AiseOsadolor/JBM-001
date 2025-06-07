@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-NG">
     <head>
-        <title>Jesus Breeds Ministries</title>
+        <title>Home | Jesus Breeds Ministries</title>
         <link rel="icon" type="image/x-icon" href="Jesus Breeds Logo (1).ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="Jesus Breeds Ministries, Jesus, Breeds, Ministries, God, Faith, Church, Community">
@@ -13,25 +13,66 @@
         </script>
 
         <style>
-           .search-box {
-                width: 20%;
-                float: right;
-                box-sizing: border-box;
-                border: 2px none transparent;
-                padding: 5px;
-                margin-right: 10px;
+            nav strong {
+                background-color: #5d625e;
                 position: relative;
+                width: 100%;
+                max-height: 25%;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                display: flex;
+            }
+          
+            .main-nav {
+               width: 46%;
+                margin: 10px auto;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            .main-nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            .main-nav li {
+                display: inline-block;
+            }
+            .search-container {
+                width: 46%;
+                margin: 10px auto;
+                padding: 10px;
+                position: relative;
+            }
+           .search-box {
+                position: absolute;
+                width: 40%;
+                top: 3px;
+                border-radius: 20px;
+                right: 20px;
             }
             .search-button {
                 position: absolute;
-                color: gray;
-                right: 40px;
-                top: 0;
-                bottom: 0;
+                background-color: transparent;
+                right: 45px;
+                top: 8px;
+                border: none;
+            }
+           div.search-container > #darkModeToggle {
+                position: absolute;
+                right: 5px;
+                bottom: 8.5px;
                 background-color: transparent;
                 border: none;
+                color: rgb(255, 255, 255);
+                font-size: 20px;
                 cursor: pointer;
-                padding: 10px;
+                transition: background-color 0.3s ease;
+            }
+            #darkModeToggle:hover {
+                background-color: hsl(0, 0%, 50%, 0.5);
+                border-radius: 60px;
             }
             main {
                 position: relative;
@@ -70,6 +111,18 @@
                 background-color: transparent;
                 color: white;
               }
+            .main-nav li a.active {
+                background-color:hwb(43 13% 15%);
+                color: black;
+                border: 1px transparent hwb(43 13% 15% 0.5);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                border-radius:10px;
+            }
+            .main-nav li a:hover:not(.active) {
+                background-color: transparent;
+                color: white;
+               
+            }
 
             article {
                margin: 0;
@@ -77,10 +130,13 @@
                padding: 0;
 
             }
-            .images img {
+           main div ul.images img {
+                margin: o;
+                padding:0;
                 max-width: 100%;
                 height: auto;
                 border-radius: 10px;
+                display: block;
             }
            
             body {
@@ -88,6 +144,14 @@
                 background-color: #E8F5E9;
                 margin: 0;
                 padding: 0;
+            }
+            footer {
+                position: relative;
+                width: 100%;
+                bottom:0;
+                left: 0;
+                right: 0;
+                background-color: rgb(93, 98, 94, 0.8);
             }
             .footer-links, .social-links{
                 display: flex;
@@ -103,7 +167,6 @@
                 color: violet;
             }
             .footer-div {
-                background-color: rgb(93, 98, 94, 0.9);
                 color: #ffffff;
                 padding: 10px 0;
                 text-align: center;
@@ -205,11 +268,26 @@
             body.dark-mode .footer-links a {
                 color: #ffd700 !important;
             }
+            body.dark-mode .main-nav li a.active {
+                background-color:#333 !important;
+                color: hwb(43 13% 15%) !important;
+                border: 1px solid hwb(43 13% 15%, 0.5) !important;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+            }
             body.dark-mode .main-nav li a:hover,
             body.dark-mode .footer-links a:hover {
                 color: #fff !important;
             }
-            body.dark-mode button,
+            body.dark-mode .search-button {
+                background-color: #444 !important;
+                color: #ffffff !important;
+                border: 1px solid hsl(51, 100%, 50%, 0.5) !important;
+            }
+
+            body.dark-mode #darkModeToggle:hover {
+                background-color: hsl(0, 0%, 50%, 0.5)  !important;
+                border-radius: 60px !important;
+            }
             body.dark-mode .send-message-button,
             body.dark-mode .send-comment-button {
                 background-color: #333 !important;
@@ -231,35 +309,42 @@
         </style>
     </head>
     <body>
-         <!-- Dark Mode Toggle Button -->
-        <button id="darkModeToggle" style="position:fixed;top:28px;right:12px;z-index:2000;border:none;background: #5d625e;color:#fff;cursor:pointer;">
-            <i class="fas fa-moon"></i>
-    </button>
-    <!-- Navigation Menu -->
+       
         <header>
             <nav>
                 <strong>
                     <div class="main-nav">
                         <ul style="font-size: 16px;">
-                                <li><a href="index.html">Home</a></li>
+                                <li><a class="active" href="index.html">Home</a></li>
                                 <li><a href="about-us.html">About Us</a></li>
                                 <li><a href="reach-us.html">Reach Us</a></li>
                                 <li><a href="sow-a-seed.html">Sow a Seed</a></li>
                         </ul>
                     </div>
                         <!-- Search Box -->
-                        <li class="search-box" style="list-style-type: none; font-size: 16px;">
+                    <div class="search-container">
+                        <ul>
+                         <li class="search-box" style="list-style-type: none; font-size: 16px;">
                             <form action="search-results.html" method="get">
                                 <input id="tnb-google-search-input" type="text" placeholder="Search..." width="100%" name="search" required>
                                 <button type="submit" class="search-button">
-                                    <i class="fas fa-search"></i>
+                                    <img src="magnifying-glass.svg" alt="Search" title="Search" width="15" height="15">
                                 </button>
                             </form>
-                        </li>
-                    </ul>
+                         </li>
+                       </ul>
+                         <!-- Dark Mode Toggle Button -->
+                        <button id="darkModeToggle">
+                         <svg width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                            <circle cx="50" cy="50" r="40" fill="#222"/>
+                            <circle cx="50" cy="50" r="30" fill="white"/>
+                        </svg>
+                        </button>
+                        <!-- Navigation Menu -->
+                    </div>
                 </strong>
             </nav>
-        </header> <br> <br> <br>
+        </header> <br> <br>
             <main>
                 <h1 class="animated-heading" style="text-align:center; color: grey;">Welcome to Jesus Breeds Ministries</h1> <br>
                 <h2 class="animated-subheading" style="text-align: center; color: hsl(0, 0%, 50%, 0.9);">  A place where the Lord's power moves like never before.</h2>
@@ -291,8 +376,9 @@
                     <p class="copyright">
                         &copy; 2025 Jesus Breeds Ministries.  All rights reserved.
                     </p>
+               </p>
                      <p style="bottom-top:4px;color: rgb(183, 173, 158);">
-                Designed with <i class="fas fa-heart" style="color:#e25555; margin-left:4px;"></i><span style="font-size:1.2em;vertical-align:middle;"> in <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg" alt="Nigerian flag" style="width: 1.0em;vertical-align:middle;"></span> by Concept Tréma.
+                Designed with <img src="Beating heart.webp" style="color:#ff0000; width: 1.0em;vertical-align:middle;"><span style="font-size:1.0em;vertical-align:middle;"> in <img src="Nigerian flag.webp" alt="Nigerian flag" style="width: 1.0em;vertical-align:middle;"></span> by Concept Tréma.
                 </p>
           </div>
         </footer>
