@@ -58,6 +58,8 @@
                 right: 45px;
                 top: 8px;
                 border: none;
+                opacity:0;
+                pointer-events: none;
             }
            div.search-container > #darkModeToggle {
                 position: absolute;
@@ -65,7 +67,7 @@
                 bottom: 8.5px;
                 background-color: transparent;
                 border: none;
-                color: rgb(255, 255, 255);
+                color: hwb(43 13% 15%);
                 font-size: 20px;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
@@ -336,7 +338,7 @@
                             <form action="search-results.html" method="get">
                                 <input id="tnb-google-search-input" type="text" placeholder="Search..." width="100%" name="search" required>
                                 <button type="submit" class="search-button">
-                                    <img src="magnifying-glass.svg" alt="Search" title="Search" width="15" height="15">
+                                    <img src="magnifying-glass.svg" style="color: transparent;" alt="Search" title="Search" width="15" height="15">
                                 </button>
                             </form>
                          </li>
@@ -355,7 +357,7 @@
         </header> <br> <br>
             <main>
                 <h1 class="animated-heading" style="text-align:center; color: grey;">Welcome to Jesus Breeds Ministries</h1> <br>
-                <h2 class="animated-subheading" style="text-align: center; color: hsl(0, 0%, 50%, 0.9);">  A place where the Lord's power moves like never before.</h2>
+                <h2 class="animated-subheading" style="text-align: center; color: hsl(0, 0%, 50%, 0.9);">  A place where the L<span style="font-variant: small-caps;">ord</span>'s power moves like never before.</h2>
                 <div class="main-images">
                     <ul class="images" style="list-style-type: none;">
                         <li> <img src="Jesus Breeds 001.jpg" title="Picture of Jesus Breeds Ministries's Pulpit"alt="Jesus-breeds-ministries" width="100%" height="100%"></li> <br> <br>
