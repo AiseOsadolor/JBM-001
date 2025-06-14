@@ -6,18 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="Jesus Breeds Ministries, Jesus, Breeds, Ministries, God, Faith, Church, Community">
         <meta charset="UTF-8">
-        <meta name="description" content="Jesus Breeds Ministries - A place where God's power moves like never before and a ground where expectations run into manifestations.">
+        <meta name="description" content="Jesus Breeds Ministries - For in HIM, we live, and move, and have our being [Acts 17:28].">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <script>
-        </script>
 
         <style>
+       
             nav strong {
                 background-color: #5d625e;
                 position: relative;
                 width: 100%;
-                max-height: 25%;
+                max-height: auto;
                 top: 0;
                 left: 0;
                 right: 0;
@@ -26,7 +25,7 @@
             }
           
             .main-nav {
-               width: 46%;
+                width: 46%;
                 margin: 10px auto;
                 justify-content: space-between;
                 align-items: flex-start;
@@ -99,7 +98,9 @@
                 border-radius: 20px;
                 outline: none;
             }
-
+            #darkModeToggle {
+                width: 4%;
+            }
            .main-nav li a {
                 float: left;
                 border: 1px none grey;
@@ -149,7 +150,11 @@
                 margin-left: auto;
                 margin-right: auto;
             }
-           
+            main div ul.images li img:hover{
+                transform: scale(1.05);
+                transition: transform 0.3s ease;
+            }
+
             body {
                 font-family: Helvetica, Verdana,sans-serif;
                 background-color: #E8F5E9;
@@ -177,12 +182,28 @@
                 text-decoration: underline;
                 color: violet;
             }
-            .footer-div {
+            footer div.footer-div {
                 color: #ffffff;
                 padding: 10px 0;
                 text-align: center;
+                margin-bottom: 0;
+                margin-left: 0;
+                margin-right: 0;
 
             }
+            
+            #tnb-google-search-input:focus {
+                border: 1.5px solid rgb(98, 98, 197);
+                outline: none;
+            }
+            #tnb-google-search-input:valid {
+                border: 1.5px solid rgb(67, 211, 127);
+                outline: none;
+            }
+           .dropdown {
+                display: none;
+            }
+
             nav {
                 background-color: #5d625e;
                 position: fixed;
@@ -261,8 +282,7 @@
                 border-radius: 12px;
             }
             body.dark-mode main p,  
-            body.dark-mode main h1.animated-heading,
-            body.dark-mode main h2.animated-subheading {
+            body.dark-mode main h1.animated-heading {
                 color: #ffd700 !important;
             }
             body.dark-mode .main-images p,
@@ -288,6 +308,9 @@
             body.dark-mode .main-nav li a:hover,
             body.dark-mode .footer-links a:hover {
                 color: #fff !important;
+            }
+            body.dark-mode h2.animated-subheading {
+                color:#fff !important;
             }
             body.dark-mode .search-button {
                 background-color: #444 !important;
@@ -317,6 +340,230 @@
             body.dark-mode a:hover {
                 color: #fff !important;
             }
+            @media screen and (max-width: 806px) {
+            nav strong {
+                background-color: #5d625e;
+                width: 100%;
+                max-height: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                display: flex;
+            }
+                
+            .main-nav {
+                width: 60%;
+                margin: 10px auto;
+                justify-content: space-between;
+                align-items: flex-start;
+                    
+            }
+            .main-nav ul {
+                list-style-type: none;
+                margin-left: 20px;
+                padding: 0;
+            }
+            .main-nav li {
+                display: inline-block;
+            }
+            .search-container {
+                width: 40%;
+            }
+            .search-box {
+                width: 30%;
+                margin-right: 30px;
+            }
+            #darkModeToggle {
+                width: 8%;
+               margin-right: 15px;
+            }
+            }
+            @media screen and (max-width: 672px) {
+            nav strong {
+                background-color: #5d625e;
+                width: 100%;
+                max-height: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                display: flex;
+            }
+            .main-nav {
+                width: 70%;
+                margin: 10px auto;
+                justify-content: space-between;
+                align-items: flex-start;
+                    
+            }
+            .main-nav ul {
+                list-style-type: none;
+                margin-left: 30px;
+                padding: 0;
+            }
+            .main-nav li {
+                display: inline-block;
+            }
+            .search-container {
+                width: 30%;
+            }
+            .search-box {
+                width: 25%;
+                margin-right: 50px;
+            }
+            #darkModeToggle {
+                width: 5%;
+               margin-right: 25px;
+            }
+            }
+
+           @media screen and (max-width: 593px) {
+           nav strong {
+                background-color: #5d625e;
+                width: 100%;
+                height: 40%;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                display: block;
+                position: fixed;
+            }
+             body {
+                position: relative;
+            }
+            main  {
+                position: relative;
+                margin-top: 35%;
+            }
+            main h2.animated-heading {
+                margin-top: 35%;
+            }
+            .main-nav {
+                width: 100%;
+                margin: 5px auto;
+                position: relative;
+            }
+            .main-nav ul {
+                list-style-type: none;
+                padding: 20px;
+                border: 0;
+            }
+            .main-nav li {
+                display: block;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 12px;
+            }
+                
+            .main-nav li a {
+                float: none;
+                border: 1px none grey;
+                padding: 10px;
+                color: goldenrod;
+                text-decoration: none;
+                font-size: 1.5em;
+                
+            }
+            .main-nav li:last-child {
+                margin-bottom: 0;
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+            .search-container {
+                width: 100%;
+                display: block;
+                align-items: center;
+                position: relative;
+            }
+            .search-box {
+                width: 50%;
+                position: absolute;
+                left: 20px;
+            }
+            #darkModeToggle {
+                width: 15%;
+                position: absolute;
+                margin-right: 15px;
+                top: 10px;
+                
+            }
+            }
+            @media screen and (max-width: 480px) {
+           nav strong {
+                background-color: #5d625e;
+                width: 100%;
+                height: 40%;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                display: block;
+                position: fixed;
+            }
+             body {
+                position: relative;
+            }
+            main  {
+                position: relative;
+                margin-top: 45%;
+            }
+            main h2.animated-heading {
+                margin-top: 40%;
+            }
+            .main-nav {
+                width: 100%;
+                margin: 5px auto;
+                position: relative;
+            }
+            .main-nav ul {
+                list-style-type: none;
+                padding: 20px;
+                border: 0;
+            }
+            .main-nav li {
+                display: block;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 12px;
+            }
+                
+            .main-nav li a {
+                float: none;
+                border: 1px none grey;
+                padding: 10px;
+                color: goldenrod;
+                text-decoration: none;
+                font-size: 1.5em;
+                
+            }
+            .main-nav li:last-child {
+                margin-bottom: 0;
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+            .search-container {
+                width: 100%;
+                display: block;
+                align-items: center;
+                position: relative;
+            }
+            .search-box {
+                width: 50%;
+                position: absolute;
+                left: 20px;
+            }
+            #darkModeToggle {
+                width: 15%;
+                position: absolute;
+                margin-right: 15px;
+                top: 10px;
+                
+            }
+
+            }
+
         </style>
     </head>
     <body>
@@ -332,6 +579,7 @@
                                 <li><a href="sow-a-seed.html">Sow a Seed</a></li>
                         </ul>
                     </div>
+                    
                         <!-- Search Box -->
                     <div class="search-container">
                         <ul>
@@ -353,12 +601,40 @@
                         </button>
                         <!-- Navigation Menu -->
                     </div>
+                     <!-- Media query drop down menu
+                    <div class="dropdown" style="display:none;">
+                        <a class="active" href="index.html">Home</a>
+                        <button class="dropbtn">Menu &#9776;<i class="fas fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="about-us.html">About Us</a>
+                            <a href="reach-us.html">Reach Us</a>
+                            <a href="sow-a-seed.html">Sow a Seed</a>
+                        </div>
+                          Search box 
+                         <ul>
+                         <li class="search-box" style="list-style-type: none; font-size: 16px;">
+                            <form action="search-results.html" method="get">
+                                <input id="tnb-google-search-input" type="text" placeholder="Search..." width="100%" name="search" required>
+                                <button type="submit" class="search-button">
+                                    <img src="magnifying-glass.svg" style="color: transparent;" alt="Search" title="Search" width="15" height="15">
+                                </button>
+                            </form>
+                         </li>
+                       </ul>
+                         Dark Mode Toggle Button 
+                        <button id="darkModeToggle">
+                         <svg width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                            <circle cx="50" cy="50" r="40" fill="hwb(43 13% 15%)"/>
+                            <circle cx="50" cy="50" r="30" fill="hwb(43 13% 15%)"/>
+                         </svg>
+                        </button>
+                    </div>-->
                 </strong>
             </nav>
         </header> <br> <br>
             <main>
-                <h1 class="animated-heading" style="text-align:center; color: grey;">Welcome to Jesus Breeds Ministries</h1> <br>
-                <h2 class="animated-subheading" style="text-align: center; color: hsl(0, 0%, 50%, 0.9);">  A place where the L<span style="font-variant: small-caps;">ord</span>'s power moves like never before.</h2>
+                <h1 class="animated-heading" style="text-align:center; color: grey;">Welcome to Jesus Breeds Ministries</h1> 
+                <h2 class="animated-subheading" style="text-align: center; color: hsl(0, 0%, 50%, 0.9);"> For in <span style="text-transform: uppercase;">him</span> we live, and move, and have our being [Acts 17:28].</h2>
                 <div class="main-images">
                     <ul class="images" style="list-style-type: none;">
                         <li> <img src="Jesus Breeds 001.jpg" title="Picture of Jesus Breeds Ministries's Pulpit"alt="Jesus-breeds-ministries" width="100%" height="100%"></li> <br> <br>
@@ -367,6 +643,10 @@
             </main>
             <script src="script.js"></script>
          <script src="https://kit.fontawesome.com/cf0f5e063f.js" crossorigin="anonymous"></script>
+         <p>
+           <br>
+           <br>
+         </p>
         <footer>
           <div class="footer-div">
                 <p class="social-links">

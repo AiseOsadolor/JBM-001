@@ -2,8 +2,8 @@
 <html>
   <html lang="en-NG">
     <head>
-        <title>Jesus Breeds Ministries</title>
-        <link rel="icon" type="image/x-icon" href="img/Jesus Breeds Logo (1).ico">
+        <title>About Us | Jesus Breeds Ministries</title>
+        <link rel="icon" type="image/x-icon" href="Jesus Breeds Logo (1).ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="Jesus Breeds Ministries, Jesus, Breeds, Ministries, God, Faith, Church, Community">
         <meta charset="UTF-8">
@@ -14,35 +14,165 @@
         </script>
 
         <style>
-           .search-box {
-                width: 20%;
-                float: right;
-                box-sizing: border-box;
-                border: 2px none transparent;
-                padding: 5px;
-                margin-right: 10px;
+           body {
+                font-family: Helvetica, Verdana,sans-serif;
+                background-color: #E8F5E9;
+                margin: 0;
+           }
+          nav strong {
+                background-color: #5d625e;
                 position: relative;
+                width: 100%;
+                max-height: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                display: flex;
+            }
+          
+            .main-nav {
+                width: 46%;
+                margin: 10px auto;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            .main-nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            .main-nav li {
+                display: inline-block;
+            }
+            .search-container {
+                width: 46%;
+                margin: 10px auto;
+                padding: 10px;
+                position: relative;
+            }
+           .search-box {
+                position: absolute;
+                width: 40%;
+                top: 3px;
+                border-radius: 20px;
+                right: 20px;
             }
             .search-button {
                 position: absolute;
-                color: gray;
-                right: 40px;
-                top: 0;
-                bottom: 0;
+                background-color: transparent;
+                right: 45px;
+                top: 8px;
+                border: none;
+                opacity:0;
+                pointer-events: none;
+            }
+           div.search-container > #darkModeToggle {
+                position: absolute;
+                right: 5px;
+                bottom: 8.5px;
                 background-color: transparent;
                 border: none;
+                color: hwb(43 13% 15%);
+                font-size: 20px;
                 cursor: pointer;
-                padding: 10px;
+                transition: background-color 0.3s ease;
+            }
+            #darkModeToggle:hover {
+                background-color: hsl(0, 0%, 50%, 0.5);
+                border-radius: 60px;
             }
             main {
+                width: 100%;
                 position: relative;
-                padding: 20px;
-                margin-top: 10px; /* Adjust for fixed nav height */
+                padding: 1px;
+                margin-top: 0;
+                margin-left: auto;
+                margin-right: auto;
             }
-            main div {
+            main section#about-us, main section#our-vision {
+                width: 70%;
+                line-height: 1.5;
+                margin: 5px 15%;
+                color: #333;
+                font-weight: 400;
+                margin-bottom: 20px;
+                display: block;
+                
+                
+            }
+            main section#about-us, main section#our-vision > p {
+                font-family: Helvetica, Verdana, sans-serif;
+                font-size: 1.2em;
+                text-wrap: wrap;
+                text-align-last: left;
+                text-align: justify;
+            }
+
+            main section#about-us h2 { 
+                color: goldenrod;
+                display: block;
+                margin-left: 38%;
+                font-size: 24px;
+                margin-bottom: 10px;
                 text-align: center;
+                text-wrap: nowrap;
+                width: 100%;  
+                
+            }
+            main section#our-vision h2 {
+                color: goldenrod;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 24px;
+                margin-bottom: 10px;
+                text-align: center;
+                text-wrap: nowrap;
+                width: 100%;
+                
+            }
+            main h2.heading-text {
+                font-size: 1.5em;
+                font-weight: bold;
+                font-family: Garamond, Georgia, serif;
+                color: #333;
+                text-align: center;
+                white-space: wrap;
+             }
+            
+            #about-us img {
+                max-width: 70%;
+                max-height: 70%;
+                display: block;
                 margin: 0 auto;
-                max-width: 100%;
+                position: relative;
+            }
+            #about-us img:hover {
+                transform: scale(1.05);
+                transition: transform 0.3s ease;
+            }
+
+            .main-nav li a:hover {
+                background-color: transparent;
+                color: white;
+            }
+              form input:focus, form textarea:focus {
+                border: 1.5px solid rgb(91, 91, 160);
+                outline: none;
+            }
+            
+            form input:valid, form textarea:valid {
+                border: 1.5px solid rgb(67, 211, 127);
+                outline: none;
+            }
+            #tnb-google-search-input:focus {
+                border: 1.5px solid rgb(98, 98, 197);
+                outline: none;
+            }
+            #tnb-google-search-input:valid {
+                border: 1.5px solid rgb(67, 211, 127);
+                outline: none;
             }
             input[type="text"] {
                 width: 80%;
@@ -51,7 +181,9 @@
                 border-radius: 20px;
                 outline: none;
             }
-
+            #darkModeToggle {
+                width: 4%;
+            }
            .main-nav li a {
                 float: left;
                 border: 1px none grey;
@@ -64,11 +196,19 @@
             .main-nav li a:hover {
                 background-color: transparent;
                 color: white;
+                font-size:large;
               }
-
-            body {
-                font-family: Helvetica, Verdana,sans-serif;
-                background-color: #E8F5E9;
+            .main-nav li a.active {
+                background-color:hwb(43 13% 15%);
+                color: black;
+                border: 1px transparent hwb(43 13% 15% 0.5);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                border-radius:10px;
+            }
+            .main-nav li a:hover:not(.active) {
+                background-color: transparent;
+                color: white;
+               
             }
             .footer-links, .social-links{
                 display: flex;
@@ -91,44 +231,8 @@
                 position: relative;
 
             }
-            nav {
-                background-color: #5d625e;
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                z-index: 1000;
-            }
-            section div p {
-                padding: 40px;
-                margin: 20px;
-                border-radius: 10px;
-                line-height: 1.5;
-                text-wrap: wrap;
-                text-align-last: center;
-                font-size: 1.2em;
-    
-            }
-            h2 {
-                color: goldenrod;
-                font-size: 24px;
-                margin-bottom: 10px;
-            }
-            #about-us, #our-founder, #our-vision {
-                position: relative;
-                text-wrap: wrap;
-                
-            }
-            img {
-               
-                position:absolute;
-                right: 50%;
-                transform: translateX(50%);
-                margin: 20px;
-                z-index: -1;
-               
-            }
-/* Dark mode style */
+            
+             /* Dark mode style */
             body.dark-mode {
                 background-color: #181a1b !important;
                 color: #e0e0e0 !important;
@@ -141,18 +245,22 @@
             body.dark-mode label[for] {
                 color: #ffd700 !important;
             }
-            body.dark-mode .section,
-            body.dark-mode #contact-details,
-            body.dark-mode #contact-form,
-            body.dark-mode #comment-form {
+            body.dark-mode main,
+            body.dark-mode .main-images,
+            body.dark-mode .images {
                 background-color: #23272b !important;
                 color: #e0e0e0 !important;
                 box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+                border-radius: 12px;
+            } 
+            body.dark-mode main h2.heading-text {
+                color: #ffd700 !important;
             }
-            body.dark-mode .section p,
-            body.dark-mode #contact-details p,
-            body.dark-mode #contact-form label,
-            body.dark-mode #comment-form label {
+            body.dark-mode main p {
+                color: #f4f4f4 !important;
+            }
+            body.dark-mode .main-images p,
+            body.dark-mode .images p {
                 color: #ffd700 !important;
             }
             body.dark-mode input,
@@ -165,11 +273,26 @@
             body.dark-mode .footer-links a {
                 color: #ffd700 !important;
             }
+            body.dark-mode .main-nav li a.active {
+                background-color:#333 !important;
+                color: hwb(43 13% 15%) !important;
+                border: 1px solid hwb(43 13% 15%, 0.5) !important;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+            }
             body.dark-mode .main-nav li a:hover,
             body.dark-mode .footer-links a:hover {
                 color: #fff !important;
             }
-            body.dark-mode button,
+            body.dark-mode .search-button {
+                background-color: #444 !important;
+                color: #ffffff !important;
+                border: 1px solid hsl(51, 100%, 50%, 0.5) !important;
+            }
+
+            body.dark-mode #darkModeToggle:hover {
+                background-color: hsl(0, 0%, 50%, 0.5)  !important;
+                border-radius: 60px !important;
+            }
             body.dark-mode .send-message-button,
             body.dark-mode .send-comment-button {
                 background-color: #333 !important;
@@ -188,13 +311,413 @@
             body.dark-mode a:hover {
                 color: #fff !important;
             }
-                     
+            @media screen and (max-width: 806px) {
+            nav strong {
+                background-color: #5d625e;
+                width: 100%;
+                max-height: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                display: flex;
+            }
+                
+            .main-nav {
+                width: 60%;
+                margin: 10px auto;
+                justify-content: space-between;
+                align-items: flex-start;
+                    
+            }
+            .main-nav ul {
+                list-style-type: none;
+                margin-left: 20px;
+                padding: 0;
+            }
+            .main-nav li {
+                display: inline-block;
+            }
+            .search-container {
+                width: 40%;
+            }
+            .search-box {
+                width: 30%;
+                margin-right: 30px;
+            }
+            #darkModeToggle {
+                width: 8%;
+               margin-right: 15px;
+            }
+            }
+            @media screen and (max-width: 806px) {
+            nav strong {
+                background-color: #5d625e;
+                width: 100%;
+                max-height: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                display: flex;
+            }
+                
+            .main-nav {
+                width: 60%;
+                margin: 10px auto;
+                justify-content: space-between;
+                align-items: flex-start;
+                    
+            }
+            .main-nav ul {
+                list-style-type: none;
+                margin-left: 20px;
+                padding: 0;
+            }
+            .main-nav li {
+                display: inline-block;
+            }
+            .search-container {
+                width: 30%;
+                position: relative;
+            }
+            .search-box {
+                width: 70%;
+                position: absolute;
+                left: 5px;
+            }
+            #darkModeToggle {
+                width: 5%;
+                margin-right: 25px;
+            }
+            }
+            @media screen and (max-width: 672px) {
+            nav strong {
+                background-color: #5d625e;
+                width: 100%;
+                max-height: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                display: flex;
+            }
+            .main-nav {
+                width: 70%;
+                margin: 10px auto;
+                justify-content: space-between;
+                align-items: flex-start;
+                    
+            }
+            .main-nav ul {
+                list-style-type: none;
+                margin-left: 15px;
+                padding: 0;
+            }
+            .main-nav li {
+                display: inline-block;
+            }
+            .search-container {
+                width: 30%;
+                position: relative;
+            }
+            .search-box {
+                width: 50%;
+                position: absolute;
+                left: 5px;
+            }
+            #darkModeToggle {
+                width: 5%;
+                margin-right: 25px;
+            }
+            }
+
+            @media screen and (max-width: 593px) {
+            nav strong {
+                background-color: #5d625e;
+                width: 100%;
+                height: 40%;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                display: block;
+                position: fixed;
+            }
+            .main-nav {
+                width: 100%;
+                margin: 5px auto;
+                position: relative;
+            }
+            .main-nav ul {
+                list-style-type: none;
+                padding: 20px;
+                border: 0;
+            }
+            .main-nav li {
+                display: block;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 12px;
+            }
+                
+            .main-nav li a {
+                float: none;
+                border: 1px none grey;
+                padding: 10px;
+                color: goldenrod;
+                text-decoration: none;
+                font-size: 1.5em;
+                
+            }
+            .main-nav li:last-child {
+                margin-bottom: 0;
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+            .search-container {
+                width: 100%;
+                display: block;
+                align-items: center;
+                position: relative;
+            }
+            .search-box {
+                width: 50%;
+                position: relative;
+                left: 20px;
+            }
+            #darkModeToggle {
+                width: 10%;
+                position: relative;
+                margin-right: 15%;
+                
+            }
+            body {
+                position: relative;
+            }
+            main  {
+                position: relative;
+                margin-top: 50%;
+            }
+            }
+            @media screen and (max-width: 526px) {
+            nav strong {
+                background-color: #5d625e;
+                width: 100%;
+                height: 40%;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                display: block;
+                position: fixed;
+            }
+            .main-nav {
+                width: 100%;
+                margin: 5px auto;
+                position: relative;
+            }
+            .main-nav ul {
+                list-style-type: none;
+                padding: 20px;
+                border: 0;
+            }
+            .main-nav li {
+                display: block;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 12px;
+            }
+                
+            .main-nav li a {
+                float: none;
+                border: 1px none grey;
+                padding: 10px;
+                color: goldenrod;
+                text-decoration: none;
+                font-size: 1.5em;
+                
+            }
+            .main-nav li:last-child {
+                margin-bottom: 0;
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+            .search-container {
+                width: 100%;
+                display: block;
+                align-items: center;
+                position: relative;
+            }
+            .search-box {
+                width: 50%;
+                position: relative;
+                left: 20px;
+            }
+            #darkModeToggle {
+                width: 10%;
+                position: relative;
+                margin-right: 15%;
+                
+            }
+            body {
+                position: relative;
+            }
+            main  {
+                position: relative;
+                margin-top: 50%;
+            }
+            }
+
+            @media screen and (max-width: 483px) {
+            nav strong {
+                background-color: #5d625e;
+                width: 100%;
+                height: 37%;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                display: block;
+                position: fixed;
+            }
+            .main-nav {
+                width: 100%;
+                margin: 5px auto;
+                position: relative;
+            }
+            .main-nav ul {
+                list-style-type: none;
+                padding: 20px;
+                border: 0;
+            }
+            .main-nav li {
+                display: block;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 12px;
+            }
+                
+            .main-nav li a {
+                float: none;
+                border: 1px none grey;
+                padding: 10px;
+                color: goldenrod;
+                text-decoration: none;
+                font-size: 1.5em;
+                
+            }
+            .main-nav li:last-child {
+                margin-bottom: 0;
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+            .search-container {
+                width: 100%;
+                display: block;
+                align-items: center;
+                position: relative;
+            }
+            .search-box {
+                width: 50%;
+                position: relative;
+                left: 20px;
+            }
+            #darkModeToggle {
+                width: 10%;
+                position: relative;
+                margin-right: 15%;
+                
+            }
+            body {
+                position: relative;
+            }
+            main  {
+                position: relative;
+                margin-top: 50%;
+            }
+            }
+            
+            @media screen and (max-width: 434px) {
+            nav strong {
+                background-color: #5d625e;
+                width: 100%;
+                height: 40%;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                display: block;
+                position: fixed;
+            }
+            .main-nav {
+                width: 100%;
+                margin: 5px auto;
+                position: relative;
+            }
+            .main-nav ul {
+                list-style-type: none;
+                padding: 20px;
+                border: 0;
+            }
+            .main-nav li {
+                display: block;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 12px;
+            }
+                
+            .main-nav li a {
+                float: none;
+                border: 1px none grey;
+                padding: 10px;
+                color: goldenrod;
+                text-decoration: none;
+                font-size: 1.5em;
+                
+            }
+            .main-nav li:last-child {
+                margin-bottom: 0;
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+            .search-container {
+                width: 100%;
+                display: block;
+                position: relative;
+            }
+            .search-box {
+                width: 50%;
+                position: relative;
+                left: 20px;
+            }
+            #darkModeToggle {
+                width: 10%;
+                position: relative;
+                margin-right: 15%;
+                
+            }
+            body {
+                position: relative;
+                margin: 0;
+            }
+            main  {
+                position: relative;
+                margin-top: 60%;
+                
+            }
+            main section {
+                display: block;
+                align-content: center;
+                align-items: center;
+                position: relative;
+            }
+
+            }
+
+        </style>
         </style>
     </head>
-     <!-- Dark Mode Toggle Button -->
-        <button id="darkModeToggle" style="position:fixed;top:28px;right:6px;z-index:2000;border:none;background: #5d625e;color:#fff;cursor:pointer;">
-            <i class="fas fa-moon"></i>
-    </button>
     <body>
         <!-- Navigation Menu -->
         <header>
@@ -203,12 +726,12 @@
                     <div class="main-nav">
                         <ul style="font-size: 16px;">
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a class="active" href="about-us.html">About Us</a></li>
                                 <li><a href="reach-us.html">Reach Us</a></li>
                                 <li><a href="sow-a-seed.html">Sow a Seed</a></li>
                         </ul>
                     </div>
-                        <!-- Search Box -->
+                    <div class="search-container"> <!-- Search Box -->
                         <li class="search-box" style="list-style-type: none; font-size: 16px;">
                             <form action="search-results.html" method="get">
                                 <input id="tnb-google-search-input" type="text" placeholder="Search..." width="100%" name="search" required>
@@ -218,31 +741,37 @@
                             </form>
                         </li>
                     </ul>
+                         <!-- Dark Mode Toggle Button -->
+                        <button id="darkModeToggle">
+                         <svg width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                            <circle cx="50" cy="50" r="40" fill="hwb(43 13% 15%)"/>
+                            <circle cx="50" cy="50" r="30" fill="hwb(43 13% 15%)"/>
+                        </svg>
+                        </button>
+                    </div> 
                 </strong>
             </nav>
         </header> 
         <!-- Main Content -->
        <br>
-       <section> <br><br>
-        <div id="about-us">
+       <main>
+            <h2 class="heading-text"> Welcome to the <i>About Us</i> page of Jesus Breeds Ministries. </h2> 
+           <br> 
+         <section id="about-us">
             <h2>About Us</h2>
             <p>
                 Jesus Breeds is a non-profit organization dedicated to spreading the message of love, hope, and faith through various community outreach programs and initiatives. Our mission is to empower individuals and families to lead fulfilling lives rooted in Christian values.
-            </p>
-        </div>
-
-        <!-- Our Founder Section -->
-        <div id="our-founder">
-            <div><h2>Our Founder</h2>
-            <img src="Bishop.png" width="200" height="200" style="border-radius: 10px;" alt="Bishop Eddy Omoruyi" title="Bishop Eddy Omoruyi">
-            </div> <br> <br> <br> <br> <br> <br> <br> <br>
+            </p> <br>
+         
+            <h2 >Our Founder</h2>
+            <img src="Bishop.png" width="200" height="200" style="border-radius: 10px;" alt="Bishop Eddy Omoruyi-Okundaye" title="Bishop Eddy Omoruyi-Okundaye">
             <p>
-               <br> Jesus Breeds was founded in 1996 by <b>Bishop Eddy Omoruyi </b> , a visionary leader with a passion for spreading the gospel and transforming lives.
+               <br> Jesus Breeds was founded in 1996 by <b>Bishop Eddy Omoruyi-Okundaye </b> , a visionary leader with a passion for spreading the gospel and transforming lives.
                 With over 20 years of ministry experience, Bishop Omoruyi has dedicated his life to serving God and empowering communities through faith, love, and service.
             </p>
-        </div>
-        <!-- Our Vision Section -->
-        <div id="our-vision">
+         </section>
+         <!-- Our Vision Section -->
+         <section id="our-vision">
             <h2>Our Vision</h2>
             <p>
                 Our vision is to create a world where every individual experiences the transformative power of Jesus Christ. We strive to build a community that reflects God's love and grace, fostering spiritual growth and meaningful connections among all people.
@@ -251,8 +780,8 @@
             <p>
                 We believe in the authority of Scripture, the power of prayer, and the importance of community. Our faith is rooted in the teachings of Jesus Christ, and we are committed to living out His message of love and redemption.
             </p>
-        </div>
-        </section>
+         </section>
+    </main>
         <script src="script.js"></script>
         <script src="https://kit.fontawesome.com/cf0f5e063f.js" crossorigin="anonymous"></script>
      <footer>
@@ -275,10 +804,10 @@
                     <p class="copyright">
                         &copy; 2025 Jesus Breeds Ministries.  All rights reserved.
                     </p>
+                 </p>
                      <p style="bottom-top:4px;color: rgb(183, 173, 158);">
-                Designed with <i class="fas fa-heart" style="color:#e25555; margin-left:4px;"></i><span style="font-size:1.2em;vertical-align:middle;"> in <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg" alt="Nigerian flag" style="width: 1.0em;vertical-align:middle;"></span> by Concept Tréma.
+                Designed with <img src="Beating heart.webp" style="color:#ff0000; width: 1.0em;vertical-align:middle;"><span style="font-size:1.0em;vertical-align:middle;"> in <img src="Nigerian flag.webp" alt="Nigerian flag" style="width: 1.0em;vertical-align:middle;"></span> by Concept Tréma.
                 </p>
-                
           </div>
         </footer>
     </body>

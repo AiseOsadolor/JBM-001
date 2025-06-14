@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html>
-  <html lang="en-NG">
-    <head>
-        <title>Jesus Breeds Ministries</title>
-        <link rel="icon" type="image/x-icon" href="img/Jesus Breeds Logo (1).ico">
+<html lang="en-NG">
+  <head>
+        <title>Sow a Seed | Jesus Breeds Ministries</title>
+        <link rel="icon" type="image/x-icon" href="Jesus Breeds Logo (1).ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="Jesus Breeds Ministries, Jesus, Breeds, Ministries, God, Faith, Church, Community">
         <meta charset="UTF-8">
@@ -12,66 +11,209 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
         <style>
-           .search-box {
-                width: 25%;
-                max-width: 400px;
-                float: right;
-                box-sizing: border-box;
-                border: 1px none transparent;
-                border-radius: 20px;
-                margin-right: 0px;
+           @media screen and (max-width: 1600px){}
+            
+            
+          
+           body header main nav strong div ul li form {
+                margin: 0;
+                padding: 0;
+           }
+           body {
+                max-width: 100%;
+                max-height: 100%;
+            }
+           header nav strong {
+                background-color: #5d625e;
+                position: relative;
+                width: 100%;
+                max-height: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                display: flex;
+            }
+          
+            .main-nav {
+                width: 46%;
+                margin: 10px auto;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            .main-nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            .main-nav li {
+                display: inline-block;
+            }
+            .search-container {
+                width: 46%;
+                margin: 0 auto;
+                padding: 0 auto;
                 position: relative;
             }
+            .search-container ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                position: relative;
+               
+            }
+           .search-box {
+                position: absolute;
+                width: 40%;
+                top: 5px;
+                border-radius: 20px;
+                border: 1px transparent white;
+                left: 50%;
+            }
+            #darkModeToggle{
+                width: 4%;
+            }
+            .search-box input[type="text"] {
+                width: 80%;
+                padding: 12px;
+                border-radius: 20px;
+                border: 1px solid white;
+                top: 10px;
+                left: 17%;
+        
+            }
+
             .search-button {
                 position: absolute;
-                color: gray;
-                right: 160px;
-                top: 0;
-                bottom: 0;
                 background-color: transparent;
+                right: 50px;
+                top: 8px;
                 border: none;
-                cursor: pointer;
-                padding: 10px;
+                opacity:0;
+                pointer-events: none;
             }
-            #paystack-button {
-                background-color: #a8ebad;
-                color: rgb(0, 0, 0);
-                font-weight: bold;
-                padding: 10px 20px;
-                border: none;
-                border-radius: 30px;
-                cursor: pointer;
+            
+            #darkModeToggle:hover {
+                background-color: hsl(0, 0%, 50%, 0.91);
+                border-radius: 60px;
             }
-            #paystack-button:hover {
-                background-color:#ffd700;
-                color: white;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            }
-            .section div {
+            main {
                 position: relative;
-                padding: 10px;
+                padding: 20px;
+                margin-top: 10px; /* Adjust for fixed nav height */
+            }
+            main div {
                 text-align: center;
                 margin: 0 auto;
                 max-width: 100%;
             }
-            #donation-form label, label[for] {
-                position: absolute;
-                left: 390px;
-                font-weight: bold;
-                margin-bottom: 8px;
-                display: block;
-                color: #333;
-                
+            .main-nav ul {
+                white-space: normal;
             }
-            input[type="text"], input[type="tel"], input[type="email"], input[type="number"] {
-                width: 50%;
-                max-width: 80%;
+          
+            .main-nav li a {
+                float: left;
+                border: 1px none grey;
+                padding: 10px;
+                border-radius: 20px;
+                color: goldenrod;
+                text-decoration: none;
+            }
+            
+            .main-nav li a:hover {
+                background-color: transparent;
+                color: rgb(255, 255, 255);
+                font-size: large;
+              }
+            .main-nav li a.active {
+                background-color:hwb(43 13% 15%);
+                color: black;
+                border: 1px transparent hwb(43 13% 15% 0.5);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                border-radius:10px;
+            }
+            .main-nav li a:hover:not(.active) {
+                background-color: transparent;
+                color: white;
+               
+            }
+            .main-nav li a.active:hover {
+                background-color: hwb(43 13% 15%);
+                color: black;
+            }
+
+           div.search-container > #darkModeToggle {
+                position: absolute;
+                right: 0.1%;
+                bottom: 17px;
+                background-color: transparent;
+                border: none;
+                color: hwb(43 13% 15%);
+                font-size: 20px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+            #darkModeToggle:hover {
+                background-color: hsl(0, 0%, 50%, 0.5);
+                border-radius: 60px;
+            }
+          
+            #sow-seed-button {
+                position:absolute;
+                background-color: #a8ebad;
+                color: rgb(0, 0, 0);
+                font-weight: bold;
                 padding: 15px;
                 border: none;
                 border-radius: 20px;
-                outline: none;
+                cursor: pointer;
+                text-align: center;
+                left: 40%;
             }
-          
+            #sow-seed-button:hover {
+                background-color:hwb(43 13% 15%);
+                color:#fdfdfd;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+            main {
+               max-width: 100%;
+               max-height:100%;
+               width: 1200px;
+               margin: 20px auto;
+               padding: 0 40px;
+               box-sizing: border-box;
+               position: relative;
+            }
+           
+            div.donation-form-container {
+                padding: 10px;
+                max-width: 70%;
+                max-height: 60%;
+            }
+            form {
+                position: relative;
+                display: block;
+            }
+            form#donation-form label[for] {
+                position: absolute;
+                font-weight: bold;
+                color: #333;
+                padding: 15px;
+                left: 10%;  
+                right: auto;        
+             }
+            input[type="text"], input[type="tel"], input[type="email"], input[type="number"] {
+                position: absolute;
+                max-width: 80%;
+                width: 500px;
+                height: 10px;
+                padding: 20px;
+                border-radius: 20px;
+                border: 1px solid white;
+                left:10%;
+                right:10%;
+
+            }  
            .main-nav li a {
                 float: left;
                 border: 1px none grey;
@@ -86,35 +228,49 @@
                 color: white;
             }
 
-            .section div p {
-                line-height: 2.0;
+            form input:focus, form textarea:focus {
+                border: 1.5px solid rgb(91, 91, 160);
+                outline: none;
+            }
+            
+            form input:valid, form textarea:valid {
+                border: 1.5px solid rgb(67, 211, 127);
+                outline: none;
+            }
+            #tnb-google-search-input:focus {
+                border: 1.5px solid rgb(98, 98, 197);
+                outline: none;
+            }
+            #tnb-google-search-input:valid {
+                border: 1.5px solid rgb(67, 211, 127);
+                outline: none;
+            }
+
+            .section div.paragraph {
+                height: 30%;
+                line-height: 1.5;
                 margin: 10px 0;
                 color: #333;
                 font-weight: 400;
                 margin-left: 3%;
                 margin-right: 3%;
-                margin-top: 2%;
+                margin-top: 1%;
                 margin-bottom: 20px;
                 font-family: Helvetica, Verdana, sans-serif;
                 font-size: 1.2em;
                 text-wrap: wrap;
-                text-align-last: center;
+                text-align-last: left;
                 text-align: justify;
+                display: block;
                 
             }
-            .section{
-                position: relative;
-            }
-            main div p.heading-text {
+            main h2.heading-text {
                 font-size: 1.5em;
                 font-weight: bold;
                 font-family: Garamond, Georgia, serif;
                 color: #333;
-                position: absolute;
-                right: 50%;
-                top: 10px;
-
-                transform: translateX(50%);
+                text-align: center;
+                white-space: wrap;
             }
            
             body {
@@ -153,12 +309,27 @@
                 left: 0;
                 right: 0;
                 z-index: 1000;
-            }         
-            
+            }   
+            /* Add this to your <style> block or styles.css */
+            .drop-cap::first-letter {
+                float: left;
+                font-size: 2.0em;
+                line-height: 1.5;
+                font-weight: bold;
+                margin-right: 0.2em;
+                color: #333;
+                font-family: Helvetica, Verdana, Tahoma, sans-serif;
+                text-transform: uppercase;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
+            }        
             /* Dark mode style */
             body.dark-mode {
                 background-color: #181a1b !important;
                 color: #e0e0e0 !important;
+            }
+            body.dark-mode .drop-cap::first-letter {
+                color: #ffffff !important;
             }
             body.dark-mode nav,
             body.dark-mode .footer-div {
@@ -166,21 +337,18 @@
                 color: #e0e0e0 !important;
             }
             body.dark-mode label[for] {
-                color: #ffd700 !important;
+                color: #f4f4f4 !important;
             }
-            body.dark-mode .section,
-            body.dark-mode #contact-details,
-            body.dark-mode #contact-form,
-            body.dark-mode #comment-form {
+            body.dark-mode .section {
                 background-color: #23272b !important;
                 color: #e0e0e0 !important;
                 box-shadow: 0 2px 8px rgba(0,0,0,0.3);
             }
-            body.dark-mode .section p,
-            body.dark-mode #contact-details p,
-            body.dark-mode #contact-form label,
-            body.dark-mode #comment-form label {
+            body.dark-mode .section h2.heading-text {
                 color: #ffd700 !important;
+            }
+            body.dark-mode .section p {
+                color: #f4f4f4 !important;
             }
             body.dark-mode input,
             body.dark-mode textarea {
@@ -196,18 +364,30 @@
             body.dark-mode .footer-links a:hover {
                 color: #fff !important;
             }
-            body.dark-mode button,
-            body.dark-mode .send-message-button,
-            body.dark-mode .send-comment-button {
-                background-color: #333 !important;
-                color: #ffd700 !important;
-                border: 1px solid #ffd700 !important;
+           body.dark-mode .main-nav li a.active {
+                background-color:#333 !important;
+                color: hwb(43 13% 15%) !important;
+                border: 1px solid hwb(43 13% 15%, 0.5) !important;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
             }
-            body.dark-mode button:hover,
-            body.dark-mode .send-message-button:hover,
-            body.dark-mode .send-comment-button:hover {
-                background-color: #222 !important;
+            body.dark-mode button {
+                background-color: #333 !important;
                 color: #fff !important;
+                border: 1px transparent  hsl(51, 100%, 50%, 0.5)  !important;
+            }
+            body.dark-mode .search-button {
+                background-color: #444 !important;
+                color: #ffffff !important;
+                border: 1px solid hsl(51, 100%, 50%, 0.5) !important;
+            }
+
+            body.dark-mode #darkModeToggle:hover {
+                background-color: hsl(0, 0%, 50%, 0.5)  !important;
+                border-radius: 60px !important;
+            }
+            body.dark-mode button:hover {
+                background-color: #222 !important;
+                color: #ffd700 !important;
             }
             body.dark-mode a {
                 color: #ffd700 !important;
@@ -215,13 +395,335 @@
             body.dark-mode a:hover {
                 color: #fff !important;
             }
+            @media screen and (max-width: 806px) {
+            nav strong {
+                background-color: #5d625e;
+                width: 100%;
+                max-height: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                display: flex;
+            }
+                
+            .main-nav {
+                width: 60%;
+                margin: 10px auto;
+                justify-content: space-between;
+                align-items: flex-start;
+                    
+            }
+            .main-nav ul {
+                list-style-type: none;
+                margin-left: 20px;
+                padding: 0;
+            }
+            .main-nav li {
+                display: inline-block;
+            }
+            .search-container {
+                width: 30%;
+                position: relative;
+            }
+            .search-box {
+                width: 70%;
+                position: absolute;
+                left: 5px;
+            }
+            #darkModeToggle {
+                width: 5%;
+                margin-right: 25px;
+            }
+            }
+            @media screen and (max-width: 672px) {
+            nav strong {
+                background-color: #5d625e;
+                width: 100%;
+                max-height: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                display: flex;
+            }
+            .main-nav {
+                width: 70%;
+                margin: 10px auto;
+                justify-content: space-between;
+                align-items: flex-start;
+                    
+            }
+            .main-nav ul {
+                list-style-type: none;
+                margin-left: 15px;
+                padding: 0;
+            }
+            .main-nav li {
+                display: inline-block;
+            }
+            .search-container {
+                width: 30%;
+                position: relative;
+            }
+            .search-box {
+                width: 50%;
+                position: absolute;
+                left: 5px;
+            }
+            #darkModeToggle {
+                width: 5%;
+                margin-right: 25px;
+            }
+            }
+
+            @media screen and (max-width: 593px) {
+            nav strong {
+                display: block;
+                background-color: #5d625e;
+                width: 100%;
+                height: 40%;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                position: fixed;
+                align-items: center;
+                
+            }
+            div.main-nav {
+                width: 60%;
+                align-items: center;
+                margin: 5px 0;
+            }
+            .search-container {
+                width: 40%;
+                position: relative;
+                padding: 0;
+                margin: 5px 0;
+                
+            }
+            
+            div.main-nav ul {
+                width: 100%;
+                list-style-type: none;
+                padding: 20px;
+                border: 0;
+                
+            }
+            .main-nav li {
+                display: block;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 12px;
+            }
+                
+            .main-nav li a {
+                float: none;
+                border: 1px none grey;
+                padding: 10px;
+                color: goldenrod;
+                text-decoration: none;
+                font-size: 1.5em;
+                
+            }
+            .main-nav li:last-child {
+                margin-bottom: 0;
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+            .search-container {
+            
+                position: relative;
+                padding: 0;
+                height: auto;
+                
+            }
+            .search-box {
+                width: 50%;
+                top: -35px;
+                margin-right: 5%;
+            }
+            #darkModeToggle {
+                margin-right: 50px;
+                top: -100px;
+            }
+            body {
+                position: relative;
+            }
+            main  {
+                position: relative;
+                margin-top: 25%;
+                width: 100%;
+            }
+            }
+            
+            @media screen and (max-width: 480px) {
+            nav strong {
+                display: block;
+                background-color: #5d625e;
+                width: 100%;
+                height: 40%;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                position: fixed;
+                align-items: center;
+                
+            }
+            div.main-nav {
+                width: 60%;
+                align-items: center;
+                margin: 5px 0;
+            }
+            .search-container {
+                width: 40%;
+                position: relative;
+                padding: 0;
+                margin: 5px 0;
+                
+            }
+            
+            div.main-nav ul {
+                width: 100%;
+                list-style-type: none;
+                padding: 20px;
+                border: 0;
+                
+            }
+            .main-nav li {
+                display: block;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 12px;
+            }
+                
+            .main-nav li a {
+                float: none;
+                border: 1px none grey;
+                padding: 10px;
+                color: goldenrod;
+                text-decoration: none;
+                font-size: 1.5em;
+                
+            }
+            .main-nav li:last-child {
+                margin-bottom: 0;
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+            .search-container {
+            
+                position: relative;
+                padding: 0;
+                height: auto;
+                
+            }
+            .search-box {
+                width: 50%;
+                top: -35px;
+                margin-right: 5%;
+            }
+            #darkModeToggle {
+                margin-right: 50px;
+                top: -100px;
+            }
+            body {
+                position: relative;
+            }
+            main  {
+                position: relative;
+                margin-top: 30%;
+                width: 100%;
+            }
+
+            }
+         @media screen and (max-width: 400px) {
+            nav strong {
+                display: block;
+                background-color: #5d625e;
+                width: 100%;
+                height: 40%;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                position: fixed;
+                align-items: center;
+                
+            }
+            div.main-nav {
+                width: 60%;
+                align-items: center;
+                margin: 5px 0;
+            }
+            .search-container {
+                width: 40%;
+                position: relative;
+                padding: 0;
+                margin: 5px 0;
+                
+            }
+            
+            div.main-nav ul {
+                width: 100%;
+                list-style-type: none;
+                padding: 20px;
+                border: 0;
+                
+            }
+            .main-nav li {
+                display: block;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 12px;
+            }
+                
+            .main-nav li a {
+                float: none;
+                border: 1px none grey;
+                padding: 10px;
+                color: goldenrod;
+                text-decoration: none;
+                font-size: 1.5em;
+                
+            }
+            .main-nav li:last-child {
+                margin-bottom: 0;
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+            .search-container {
+            
+                position: relative;
+                padding: 0;
+                height: auto;
+                
+            }
+            .search-box {
+                width: 50%;
+                top: -35px;
+                margin-right: 5%;
+            }
+            #darkModeToggle {
+                margin-right: 50px;
+                top: -100px;
+            }
+            body {
+                position: relative;
+            }
+            main  {
+                position: relative;
+                margin-top: 35%;
+                width: 100%;
+            }
+
+            }
+            
         </style>
     </head>
     <body>
-        <!-- Dark Mode Toggle Button -->
-        <button id="darkModeToggle" style="position:fixed;top:28px;right:12px;z-index:2000;border:none;background: #5d625e;color:#fff;cursor:pointer;">
-            <i class="fas fa-moon"></i>
-    </button><!-- Navigation Menu -->
         <header>
             <nav>
                 <strong>
@@ -230,52 +732,63 @@
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="about-us.html">About Us</a></li>
                                 <li><a href="reach-us.html">Reach Us</a></li>
-                                <li><a href="sow-a-seed.html">Sow a Seed</a></li>
+                                <li><a class="active"href="sow-a-seed.html">Sow a Seed</a></li>
                         </ul>
                     </div>
                         <!-- Search Box -->
-                        <li class="search-box" style="list-style-type: none; font-size: 16px;">
+                    <div class="search-container">
+                        <ul>
+                         <li class="search-box" style="list-style-type: none;">
                             <form action="search-results.html" method="get">
-                                <input id="tnb-google-search-input" type="text" placeholder="Search..."max-width="100%" name="search" required>
+                                <input id="tnb-google-search-input" type="text" placeholder="Search..." width="100%" name="search" required>
                                 <button type="submit" class="search-button">
-                                    <i class="fas fa-search"></i>
+                                    <img src="magnifying-glass.svg" style="color: transparent;" alt="Search" title="Search" width="15" height="15">
                                 </button>
                             </form>
-                        </li>
-                    </ul>
+                         </li>
+                       </ul>
+                         <!-- Dark Mode Toggle Button -->
+                        <button id="darkModeToggle">
+                         <svg width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                            <circle cx="50" cy="50" r="40" fill="hwb(43 13% 15%)"/>
+                            <circle cx="50" cy="50" r="30" fill="hwb(43 13% 15%)"/>
+                        </svg>
+                        </button>
+                    </div>
                 </strong>
             </nav>
-        </header>
-        <main class="section">
-        <br><br> 
-            <div> <br>
-        <p class="heading-text"> Welcome to the <i>Sow a Seed</i> page of Jesus Breeds Ministries. </p> 
-           </div><br> 
-            <div><p>We invite you to join us in our mission to spread the love and teachings of Jesus Christ. Our ministry is dedicated to making a positive impact in the lives of individuals and communities through faith, hope, and charity. By sowing a seed, you are not just making a financial contribution; you are planting seeds of faith that would grow into something beautiful and transformative. Your support enables us to continue our outreach programmes, community services, and various initiatives that aim to uplift and inspire those who need Christ</p>
-               
-            </div>
-        <div>
-        <!-- Donation Form -->
-        <form id="donation-form">
+        </header> <br> <br>
+    <main class="section">
+        <br>
+            
+        <h2 class="heading-text"> Welcome to the <i>Sow a Seed</i> page of Jesus Breeds Ministries. </h2> 
+           <br> 
+            <div class="paragraph">
+                <p class="drop-cap"> We invite you to join us in our mission to spread the love and teachings of Jesus Christ. Our ministry is dedicated to making a positive impact in the lives of individuals and communities through faith, hope, and charity. By sowing a seed, you are not just making a financial contribution; you are planting seeds of faith that would grow into something beautiful and transformative. Your support enables us to continue our outreach programmes, community services, and various initiatives that aim to uplift and inspire those who need Christ.</p>
+            </div> <br>
+           
+         <div class="donation-form-container">
+         <!-- Donation Form -->
+         <form id="donation-form">
             <label for="full-name">Full Name:</label> <br> <br>
-            <input type="text" id="full-name" placeholder="Enter your full name" required><br><br>
+            <input type="text" id="full-name" placeholder="Enter your full name" required><br><br><br>
 
             <label for="email">Email Address:</label> <br> <br>
-            <input type="email" id="email" placeholder="Enter your email" required><br><br>
+            <input type="email" id="email" placeholder="Enter your email" required><br><br><br>
 
             <label for="phone">Phone Number:</label> <br> <br>
-            <input type="tel" id="phone" placeholder="Enter your phone number" required><br><br>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required><br><br><br>
 
             <label for="amount">Amount (NGN):</label> <br> <br>
-            <input type="number" id="amount" placeholder="Enter amount" required><br><br>
+            <input type="number" id="amount" placeholder="Enter amount" required><br><br> <br>
 
-                        <button type="button" id="paystack-button">
+                <button type="button" id="sow-seed-button" onclick="alert('Thank you for your generous donation!')">
                 <i class="fas fa-seedling" style="margin-right:6px;"></i> Sow
             </button>
-        </form>
-        <br>
+          </form> <br>
+
         </div>
-       </main> <br><br>
+    </main> <br><br>
         <script src="script.js"></script>
         <script src="https://kit.fontawesome.com/cf0f5e063f.js" crossorigin="anonymous"></script>
         <footer>
@@ -298,8 +811,9 @@
                     <p class="copyright">
                         &copy; 2025 Jesus Breeds Ministries.  All rights reserved.
                     </p>
-                <p style="bottom-top:4px;color: rgb(183, 173, 158);">
-                Designed with <i class="fas fa-heart" style="color:#e25555; margin-left:4px;"></i><span style="font-size:1.2em;vertical-align:middle;"> in <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg" alt="Nigerian flag" style="width: 1.0em;vertical-align:middle;"></span> by Concept Tréma.
+               </p>
+                     <p style="color: rgb(183, 173, 158);">
+                Designed with <img src="Beating heart.webp" style="color:#ff0000; width: 1.0em;vertical-align:middle;"><span style="font-size:1.0em;vertical-align:middle;"> in <img src="Nigerian flag.webp" alt="Nigerian flag" style="width: 1.0em;vertical-align:middle;"></span> by Concept Tréma.
                 </p>
           </div>
         </footer>

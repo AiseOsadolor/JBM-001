@@ -42,7 +42,19 @@
                 });
             }
         });
-document.getElementById('darkModeToggle').addEventListener('click', function () {
-    document.body.classList.toggle('dark-mode');
+
+document.addEventListener('DOMContentLoaded', function () {
+    const darkModeBtn = document.getElementById('darkModeToggle');
+    const moonSvg = darkModeBtn.querySelector('svg');
+
+    darkModeBtn.addEventListener('click', function () {
+        document.body.classList.toggle('dark-mode');
+        // Change the inner circle fill to black when dark mode is active, white otherwise
+        const innerCircle = moonSvg.querySelectorAll('circle')[1];
+        if (document.body.classList.contains('dark-mode')) {
+            innerCircle.setAttribute('fill', 'black');
+        } else {
+            innerCircle.setAttribute('fill', 'hwb(43 13% 15%);');
+        }
+    });
 });
-        
