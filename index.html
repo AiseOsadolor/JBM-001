@@ -25,7 +25,7 @@
             }
           
             .main-nav {
-                width: 46%;
+                width: 48%;
                 margin: 10px auto;
                 justify-content: space-between;
                 align-items: flex-start;
@@ -39,17 +39,18 @@
                 display: inline-block;
             }
             .search-container {
-                width: 46%;
-                margin: 10px auto;
-                padding: 10px;
+                width: 48%;
+                margin: 0;
+                padding: 0;
                 position: relative;
             }
-           .search-box {
+            .search-box {
                 position: absolute;
-                width: 40%;
-                top: 3px;
+                width: 50%;
+                top: 15px;
                 border-radius: 20px;
-                right: 20px;
+                border: 1px transparent white;
+                left: 5%;
             }
             .search-button {
                 position: absolute;
@@ -60,20 +61,16 @@
                 opacity:0;
                 pointer-events: none;
             }
-           div.search-container > #darkModeToggle {
+            div.search-container > #darkModeToggle {
                 position: absolute;
                 right: 5px;
                 bottom: 8.5px;
                 background-color: transparent;
-                border: none;
+                border:none;
                 color: hwb(43 13% 15%);
                 font-size: 20px;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
-            }
-            #darkModeToggle:hover {
-                background-color: hsl(0, 0%, 50%, 0.5);
-                border-radius: 60px;
             }
             main {
                 position: relative;
@@ -97,11 +94,21 @@
                 border: none;
                 border-radius: 20px;
                 outline: none;
+                transition: width 0.4s ease-in-out;
+                
+            }
+            input[type="text"]:focus {
+                width: 100%;
             }
             #darkModeToggle {
-                width: 4%;
+                width: 5%;
+                background-color: transparent;
+                border: none;
+                position: relative;
+                margin-right: 5px;
+                top: 15px;
             }
-           .main-nav li a {
+            .main-nav li a {
                 float: left;
                 border: 1px none grey;
                 padding: 10px;
@@ -150,7 +157,7 @@
                 margin-left: auto;
                 margin-right: auto;
             }
-            main div ul.images li img:hover{
+            main div ul.images li img:hover {
                 transform: scale(1.05);
                 transition: transform 0.3s ease;
             }
@@ -169,7 +176,7 @@
                 right: 0;
                 background-color: rgb(93, 98, 94, 0.8);
             }
-            .footer-links, .social-links{
+            .footer-links, .social-links {
                 display: flex;
                 justify-content: center;
                 gap: 20px;
@@ -189,11 +196,10 @@
                 margin-bottom: 0;
                 margin-left: 0;
                 margin-right: 0;
-
             }
             
             #tnb-google-search-input:focus {
-                border: 1.5px solid rgb(98, 98, 197);
+                border: 2px solid rgb(98, 98, 197);
                 outline: none;
             }
             #tnb-google-search-input:valid {
@@ -270,9 +276,6 @@
                 background-color: #444 !important;
                 color: #e0e0e0 !important;
             }
-            body.dark-mode label[for] {
-                color: #ffd700 !important;
-            }
             body.dark-mode main,
             body.dark-mode .main-images,
             body.dark-mode .images {
@@ -289,8 +292,7 @@
             body.dark-mode .images p {
                 color: #ffd700 !important;
             }
-            body.dark-mode input,
-            body.dark-mode textarea {
+            body.dark-mode input {
                 background: #23272b !important;
                 color: #e0e0e0 !important;
                 border: 1px solid #444 !important;
@@ -319,20 +321,7 @@
             }
 
             body.dark-mode #darkModeToggle:hover {
-                background-color: hsl(0, 0%, 50%, 0.5)  !important;
-                border-radius: 60px !important;
-            }
-            body.dark-mode .send-message-button,
-            body.dark-mode .send-comment-button {
-                background-color: #333 !important;
-                color: #ffd700 !important;
-                border: 1px solid #ffd700 !important;
-            }
-            body.dark-mode button:hover,
-            body.dark-mode .send-message-button:hover,
-            body.dark-mode .send-comment-button:hover {
-                background-color: #222 !important;
-                color: #fff !important;
+                border: none;
             }
             body.dark-mode a {
                 color: #ffd700 !important;
@@ -340,7 +329,8 @@
             body.dark-mode a:hover {
                 color: #fff !important;
             }
-            @media screen and (max-width: 806px) {
+
+            @media screen and (min-width: 1199px) {
             nav strong {
                 background-color: #5d625e;
                 width: 100%;
@@ -371,15 +361,16 @@
                 width: 40%;
             }
             .search-box {
-                width: 30%;
+                width: 50%;
                 margin-right: 30px;
             }
             #darkModeToggle {
                 width: 8%;
-               margin-right: 15px;
+                margin-left: 15px;
             }
             }
-            @media screen and (max-width: 672px) {
+
+            @media screen and (max-width: 991px) {
             nav strong {
                 background-color: #5d625e;
                 width: 100%;
@@ -409,20 +400,19 @@
                 width: 30%;
             }
             .search-box {
-                width: 25%;
-                margin-right: 50px;
+                width: 50%;
+                margin-left: 5px;
             }
             #darkModeToggle {
                 width: 5%;
-               margin-right: 25px;
+                margin-right: 25px;
             }
             }
 
-           @media screen and (max-width: 593px) {
-           nav strong {
+            @media screen and (max-width: 767px) {
+            nav strong {
                 background-color: #5d625e;
                 width: 100%;
-                height: 40%;
                 top: 0;
                 left: 0;
                 right: 0;
@@ -430,24 +420,21 @@
                 display: block;
                 position: fixed;
             }
-             body {
+            body {
                 position: relative;
             }
             main  {
                 position: relative;
-                margin-top: 35%;
-            }
-            main h2.animated-heading {
-                margin-top: 35%;
+                margin-top: 33%;
             }
             .main-nav {
                 width: 100%;
-                margin: 5px auto;
+                margin: 10px 0;
                 position: relative;
             }
             .main-nav ul {
                 list-style-type: none;
-                padding: 20px;
+                padding-top: 5px;
                 border: 0;
             }
             .main-nav li {
@@ -467,9 +454,9 @@
                 
             }
             .main-nav li:last-child {
-                margin-bottom: 0;
-                border-bottom: 0;
-                padding-bottom: 0;
+                margin-bottom: 20px;
+                border-bottom: 20px;
+                padding-bottom: 30px;
             }
             .search-container {
                 width: 100%;
@@ -480,21 +467,23 @@
             .search-box {
                 width: 50%;
                 position: absolute;
-                left: 20px;
+                margin-left: 5px;
+                top: -40px;
             }
             #darkModeToggle {
                 width: 15%;
                 position: absolute;
-                margin-right: 15px;
-                top: 10px;
+                margin-right: -5px;
+                top: -38px;
                 
             }
             }
-            @media screen and (max-width: 480px) {
-           nav strong {
+
+            @media screen and (max-width: 575px) {
+            nav strong {
                 background-color: #5d625e;
                 width: 100%;
-                height: 40%;
+                height: auto;
                 top: 0;
                 left: 0;
                 right: 0;
@@ -502,24 +491,22 @@
                 display: block;
                 position: fixed;
             }
-             body {
+            body {
                 position: relative;
             }
             main  {
                 position: relative;
-                margin-top: 45%;
+                margin-top: 38%;
             }
-            main h2.animated-heading {
-                margin-top: 40%;
-            }
+
             .main-nav {
                 width: 100%;
-                margin: 5px auto;
+                margin: 10px auto;
                 position: relative;
             }
             .main-nav ul {
                 list-style-type: none;
-                padding: 20px;
+                padding-top: 10px;
                 border: 0;
             }
             .main-nav li {
@@ -539,9 +526,9 @@
                 
             }
             .main-nav li:last-child {
-                margin-bottom: 0;
-                border-bottom: 0;
-                padding-bottom: 0;
+                margin-bottom: 30px;
+                border-bottom: 30px;
+                padding-bottom: 20px;
             }
             .search-container {
                 width: 100%;
@@ -552,16 +539,16 @@
             .search-box {
                 width: 50%;
                 position: absolute;
-                left: 20px;
+                margin-left: 5px;
+                top: -45px;
             }
             #darkModeToggle {
                 width: 15%;
                 position: absolute;
-                margin-right: 15px;
-                top: 10px;
+                margin-right: -5px;
+                top: -45px;
                 
             }
-
             }
 
         </style>
@@ -623,7 +610,7 @@
                        </ul>
                          Dark Mode Toggle Button 
                         <button id="darkModeToggle">
-                         <svg width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                         <svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                             <circle cx="50" cy="50" r="40" fill="hwb(43 13% 15%)"/>
                             <circle cx="50" cy="50" r="30" fill="hwb(43 13% 15%)"/>
                          </svg>
@@ -667,11 +654,11 @@
                     <p class="copyright">
                         &copy; 2025 Jesus Breeds Ministries.  All rights reserved.
                     </p>
-               </p>
-                     <p style="bottom-top:4px;color: rgb(183, 173, 158);">
-                Designed with <img src="Beating heart.webp" style="color:#ff0000; width: 1.0em;vertical-align:middle;"><span style="font-size:1.0em;vertical-align:middle;"> in <img src="Nigerian flag.webp" alt="Nigerian flag" style="width: 1.0em;vertical-align:middle;"></span> by Concept Tréma.
                 </p>
-          </div>
+                     <p style="bottom:4px;color: rgb(183, 173, 158);">
+                 Designed with <img src="Beating heart.webp" style="color:#ff0000; width: 1.0em;vertical-align:middle;"><span style="font-size:1.0em;vertical-align:middle;"> in <img src="Nigerian flag.webp" alt="Nigerian flag" style="width: 1.0em;vertical-align:middle;"></span> by <a  style="color:goldenrod; text-decoration:none; "href="mailto:info@trema.com.ng">Concept Tréma.</a>
+                </p>
+        </div>
         </footer>
     </body>
 </html>

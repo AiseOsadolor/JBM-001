@@ -14,18 +14,18 @@
         </script>
 
         <style>
-           body header main nav strong div ul li form {
+            body, header, main, nav, strong, div, ul, li, form {
                 margin: 0;
                 padding: 0;
            }
-           body {
+            body {
                 background-color:#E8F5E9;
                 max-width: 100%;
                 max-height: 100%;
-                margin: 0;
                 display: block;
+                width: 100%;
             }
-           header nav strong {
+            header, nav, strong {
                 font-family: Helvetica, Arial, sans-serif;
                 background-color: #5d625e;
                 position: relative;
@@ -39,7 +39,7 @@
             }
           
             .main-nav {
-                width: 46%;
+                width: 48%;
                 margin: 10px auto;
                 justify-content: space-between;
                 align-items: flex-start;
@@ -48,15 +48,16 @@
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
-                white-space:normal;
+                white-space: normal;
             }
             .main-nav li {
                 display: inline-block;
             }
             .search-container {
-                width: 46%;
-                margin: 0 auto;
-                padding: 0 auto;
+                display: block;
+                width: 48%;
+                margin: 0;
+                padding: 0;
                 position: relative;
             }
             .search-container ul {
@@ -66,22 +67,29 @@
                 position: relative;
                
             }
-           .search-box {
+            .search-box {
                 position: absolute;
-                width: 40%;
+                width: 50%;
                 top: 15px;
                 border-radius: 20px;
                 border: 1px transparent white;
-                right: 3%;
+                left: 5%;
             }
             #darkModeToggle{
-                width: 4%;
+                width: 5%;
+                background-color: transparent;
+                border: none;
+                position: relative;
+                margin-right: 5px;
+                top: 15px;
             }
             .search-box input[type="text"] {
-                width: 82%;
-                padding: 8px;
+                width: 80%;
+                padding: 10px;
+                border: none;
                 border-radius: 20px;
-                border: 1px solid white;
+                outline: none;
+                transition: width 0.4s ease-in-out;
             }
 
             .search-button {
@@ -94,12 +102,9 @@
                 pointer-events: none;
             }
             
-            #darkModeToggle:hover {
-                background-color: hsl(0, 0%, 50%, 0.91);
-                border-radius: 60px;
-            }
+           
             
-           .main-nav li a:hover {
+            .main-nav li a:hover {
                 background-color: transparent;
                 color: rgb(255, 255, 255);
                 font-size: large;
@@ -123,37 +128,16 @@
 
             div.search-container > #darkModeToggle {
                 position: absolute;
-                right: 0.1%;
-                bottom: 17px;
-                background-color: transparent;
-                border: none;
+                right: 5px;
+                bottom: 8.5px;
                 color: hwb(43 13% 15%);
                 font-size: 20px;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
             }
-            #darkModeToggle:hover {
-                background-color: hsl(0, 0%, 50%, 0.5);
-                border-radius: 60px;
-            }
           
-            #sow-seed-button {
-                position:absolute;
-                background-color: #a8ebad;
-                color: rgb(0, 0, 0);
-                font-weight: bold;
-                padding: 15px;
-                border: none;
-                border-radius: 20px;
-                cursor: pointer;
-                text-align: center;
-                left: 40%;
-            }
-            #sow-seed-button:hover {
-                background-color:hwb(43 13% 15%);
-                color:#fdfdfd;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            }
+          
+           
             .main-nav li a {
                 float: left;
                 border: 1px none grey;
@@ -199,7 +183,7 @@
                 padding: 20px;
                 box-sizing: border-box;
                 max-width: 100%;
-                max-height: 100%;
+                max-height: auto;
                 padding: 20px;
                 font-size: 1em;
             }
@@ -222,10 +206,7 @@
                 font-family: Helvetica, Verdana, sans-serif;
                 font-weight: normal;
             }
-            main {
-                height: 100%;
-                gap: 5px;
-            }
+
             main > section {
                 margin-bottom: 13px;   
                 margin-top: 0;
@@ -245,6 +226,7 @@
                 display: block;
                 align-items: center;
             }
+          
             form input:focus, form textarea:focus {
                 border: 1.5px solid rgb(91, 91, 160);
                 outline: none;
@@ -257,6 +239,7 @@
             #tnb-google-search-input:focus {
                 border: 1.5px solid rgb(98, 98, 197);
                 outline: none;
+                width: 100%;
             }
             #tnb-google-search-input:valid {
                 border: 1.5px solid rgb(67, 211, 127);
@@ -361,9 +344,20 @@
                 border-radius: 30px;
                 cursor: pointer;
                 transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-                position: relative;
-                left: 45%;
+               
             
+            }
+            div#contact-form button {
+                position: absolute;
+                top: 97%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            div#comment-form button {
+                position: absolute;
+                top: 96%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
             #contact-form button:hover,
             #comment-form button:hover {
@@ -453,14 +447,12 @@
             body.dark-mode .footer-links a:hover {
                 color: #fff !important;
             }
-            body.dark-mode button,
             body.dark-mode .send-message-button,
             body.dark-mode .send-comment-button {
                 background-color: #333 !important;
                 color: #ffd700 !important;
                 border: 1px solid #ffd700 !important;
             }
-            body.dark-mode button:hover,
             body.dark-mode .send-message-button:hover,
             body.dark-mode .send-comment-button:hover {
                 background-color: #222 !important;
@@ -506,13 +498,17 @@
             }
             .search-box {
                 width: 70%;
-                position: absolute;
-                left: 5px;
+                position: relative;
+                right: 2.5%;
             }
             #darkModeToggle {
                 width: 5%;
-                margin-right: 25px;
+                position: absolute;
+                margin-right: 20px;
+                top: 22px;
+                
             }
+
             #contact-details table {
                 table-layout: fixed;
                 width: 70%; 
@@ -526,8 +522,6 @@
                 border-radius: 30px;
                 cursor: pointer;
                 transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-                position: relative;
-                left: 42%;
             }
             div#comment-form button {
                 background-color: #a8ebad;
@@ -538,8 +532,19 @@
                 border-radius: 30px;
                 cursor: pointer;
                 transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-                position: relative;
-                left: 44%;
+            }
+                
+            div#contact-form button {
+                position: absolute;
+                top: 97%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            div#comment-form button {
+                position: absolute;
+                top: 96%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
 
             }
@@ -578,11 +583,13 @@
             .search-box {
                 width: 70%;
                 position: absolute;
-                left: 5px;
+                left: 10px;
             }
             #darkModeToggle {
-                width: 5%;
-                margin-right: 25px;
+                position: absolute;
+                margin-right: 20px;
+                top: 22px;
+                
             }
             #contact-details table {
                 table-layout: fixed;
@@ -597,8 +604,7 @@
                 border-radius: 30px;
                 cursor: pointer;
                 transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-                position: relative;
-                left: 37%;
+               
             }
             div#comment-form button {
                 background-color: #a8ebad;
@@ -609,8 +615,19 @@
                 border-radius: 30px;
                 cursor: pointer;
                 transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-                position: relative;
-                left: 45%;
+               
+            }
+              div#contact-form button {
+                position: absolute;
+                top: 97%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            div#comment-form button {
+                position: absolute;
+                top: 96%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
 
             }
@@ -667,8 +684,6 @@
                 border-radius: 30px;
                 cursor: pointer;
                 transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-                position: relative;
-                left: 35%;
             }
             div#comment-form button {
                 background-color: #a8ebad;
@@ -679,18 +694,38 @@
                 border-radius: 30px;
                 cursor: pointer;
                 transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-                position: relative;
-                left: 43%;
+            }
+            div#contact-form button {
+                position: absolute;
+                top: 97%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            div#comment-form button {
+                position: absolute;
+                top: 96%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
 
             }
 
             @media screen and (max-width: 593px) {
+            body {
+                margin: 0;
+                width: 100%;
+                position: relative;
+            }
+            
+            main  {
+                position: relative;
+                margin-top: 28%;
+                width: 100%;
+            } 
             nav strong {
                 display: block;
                 background-color: #5d625e;
                 width: 100%;
-                height: 40%;
                 top: 0;
                 left: 0;
                 right: 0;
@@ -699,26 +734,30 @@
                 align-items: center;
                 
             }
-            div.main-nav {
-                width: 60%;
+            div.main-nav ul {
+                width: 100%;
                 align-items: center;
                 margin: 5px 0;
             }
             .search-container {
-                width: 40%;
-                position: relative;
-                padding: 0;
-                margin: 5px 0;
-                
-            }
-            
-            div.main-nav ul {
                 width: 100%;
-                list-style-type: none;
-                padding: 20px;
-                border: 0;
+                display: block;
+                position: relative;
+            }
+            .search-box {
+                width: 50%;
+                position: absolute;
+                margin-left: 10px;
+                top: -40px;
+            }
+            #darkModeToggle {
+                width: 15%;
+                position: absolute;
+                margin-right: -10px;
+                top: -38px;
                 
             }
+                
             .main-nav li {
                 display: block;
                 align-items: center;
@@ -736,34 +775,11 @@
                 
             }
             .main-nav li:last-child {
-                margin-bottom: 0;
-                border-bottom: 0;
-                padding-bottom: 0;
+                margin-bottom: 20px;
+                border-bottom: 30px;
+                padding-bottom: 30px;
             }
-            .search-container {
-            
-                position: relative;
-                padding: 0;
-                height: auto;
-                
-            }
-            .search-box {
-                width: 50%;
-                top: -35px;
-                margin-right: 5%;
-            }
-            #darkModeToggle {
-                margin-right: 50px;
-                top: -100px;
-            }
-            body {
-                position: relative;
-            }
-            main  {
-                position: relative;
-                margin-top: 25%;
-                width: 100%;
-            }
+          
             #contact-details table {
                 table-layout: fixed;
                 width: 80%; 
@@ -777,8 +793,7 @@
                 border-radius: 30px;
                 cursor: pointer;
                 transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-                position: relative;
-                left: 32%;
+               
             }
             div#comment-form button {
                 background-color: #a8ebad;
@@ -789,18 +804,40 @@
                 border-radius: 30px;
                 cursor: pointer;
                 transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-                position: relative;
-                left: 45%;
+               
+            }
+            div#contact-form button {
+                position: absolute;
+                top: 97%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            div#comment-form button {
+                position: absolute;
+                top: 96%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
 
             }
             
-            @media screen and (max-width: 480px) {
-            nav strong {
+            @media screen and (max-width: 400px) {
+            body {
+                margin: 0;
+                width: 100%;
+                position: relative;
+            }
+            
+            main  {
+                position: relative;
+                margin-top: 48%;
+                width: 100%;
+            }
+
+            strong {
                 display: block;
                 background-color: #5d625e;
                 width: 100%;
-                height: 40%;
                 top: 0;
                 left: 0;
                 right: 0;
@@ -810,20 +847,33 @@
                 
             }
             div.main-nav {
-                width: 60%;
+                width: 100%;
                 align-items: center;
                 margin: 5px 0;
             }
             .search-container {
-                width: 40%;
+                width: 100%;
+                display: block;
                 position: relative;
-                padding: 0;
-                margin: 5px 0;
-                
             }
+            .search-box {
+                width: 50%;
+                position: absolute;
+                margin-left: 10px;
+                top: -40px;
+            }
+            #darkModeToggle {
+                width: 15%;
+                position: absolute;
+                margin-right: -10px;
+                top: -38px;
             
             div.main-nav ul {
+                clear: both;
+                display: block;
                 width: 100%;
+                margin-left: 0;
+                margin-right: 0;
                 list-style-type: none;
                 padding: 20px;
                 border: 0;
@@ -846,143 +896,11 @@
                 
             }
             .main-nav li:last-child {
-                margin-bottom: 0;
-                border-bottom: 0;
+                margin-bottom: 30px;
+                border-bottom: 30px;
                 padding-bottom: 0;
-            }
-            .search-container {
-            
-                position: relative;
-                padding: 0;
-                height: auto;
-                
-            }
-            .search-box {
-                width: 50%;
-                top: -35px;
-                margin-right: 5%;
-            }
-            #darkModeToggle {
-                margin-right: 50px;
-                top: -100px;
-            }
-            body {
-                position: relative;
-            }
-            main  {
-                position: relative;
-                margin-top: 30%;
-                width: 100%;
-            }
-            #contact-details table {
-                table-layout: fixed;
-                width: 100%; 
-            }
-            div#contact-form button {
-                background-color: #a8ebad;
-                color: #222;
-                font-weight: bold;
-                padding: 10px 24px;
-                border: none;
-                border-radius: 30px;
-                cursor: pointer;
-                transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-                position: relative;
-                left: 30%;
-            }
-            div#comment-form button {
-                background-color: #a8ebad;
-                color: #222;
-                font-weight: bold;
-                padding: 10px 24px;
-                border: none;
-                border-radius: 30px;
-                cursor: pointer;
-                transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-                position: relative;
-                left: 40%;
             }
 
-            }
-         @media screen and (max-width: 400px) {
-            nav strong {
-                display: block;
-                background-color: #5d625e;
-                width: 100%;
-                height: 40%;
-                top: 0;
-                left: 0;
-                right: 0;
-                z-index: 1;
-                position: fixed;
-                align-items: center;
-                
-            }
-            div.main-nav {
-                width: 60%;
-                align-items: center;
-                margin: 5px 0;
-            }
-            .search-container {
-                width: 40%;
-                position: relative;
-                padding: 0;
-                margin: 5px 0;
-                
-            }
-            
-            div.main-nav ul {
-                width: 100%;
-                list-style-type: none;
-                padding: 20px;
-                border: 0;
-                
-            }
-            .main-nav li {
-                display: block;
-                align-items: center;
-                text-align: center;
-                margin-bottom: 12px;
-            }
-                
-            .main-nav li a {
-                float: none;
-                border: 1px none grey;
-                padding: 10px;
-                color: goldenrod;
-                text-decoration: none;
-                font-size: 1.5em;
-                
-            }
-            .main-nav li:last-child {
-                margin-bottom: 0;
-                border-bottom: 0;
-                padding-bottom: 0;
-            }
-            .search-container {
-            
-                position: relative;
-                padding: 0;
-                height: auto;
-                
-            }
-            .search-box {
-                width: 50%;
-                top: -35px;
-                margin-right: 5%;
-            }
-            #darkModeToggle {
-                margin-right: 50px;
-                top: -100px;
-            }
-            body {
-                position: relative;
-            }
-            main  {
-                position: relative;
-                margin-top: 35%;
-                width: 100%;
-            }
             #contact-details table {
                 table-layout: fixed;
                 width: 100%; 
@@ -996,8 +914,6 @@
                 border-radius: 30px;
                 cursor: pointer;
                 transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-                position: relative;
-                left: 25%;
             }
             div#comment-form button {
                 background-color: #a8ebad;
@@ -1008,8 +924,19 @@
                 border-radius: 30px;
                 cursor: pointer;
                 transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-                position: relative;
-                left: 35%;
+              
+            }
+            div#contact-form button {
+                position: absolute;
+                top: 97%;
+                left: 53%;
+                transform: translate(-50%, -50%);
+            }
+            div#comment-form button {
+                position: absolute;
+                top: 96%;
+                left: 53%;
+                transform: translate(-50%, -50%);
             }
 
             }
@@ -1074,31 +1001,31 @@
                     <i class="fas fa-map-marker-alt"></i> 2 Otasowie Close, Opp Betha Clinic, Upper Mission Extension, Aduwawa, Benin City, Nigeria.
                     </a><br><br>
                     <h3>Activities</h3> <br>
-                    <table style="width:90%; margin-left:5%; margin-right:5%; border-collapse:collapse; margin-bottom:16px; font-size:1em; overflow-x:auto;">
+                    <table style="width:90%; margin-left:5%; margin-right:5%; border-collapse:collapse; margin-bottom:16px; font-size:1.2em; overflow-x:auto;">
                         <thead style="height:20px;">
-                            <tr style="background-color:#d9f5db;">
+                            <tr style="background-color:hsl(124, 58%, 91%, 0.6);">
                                 <th style="padding:8px; text-align:center; border-radius:20px 0 0 0;">Day</th>
                                 <th style="padding:8px; text-align:center; ">Activity</th>
                                 <th style="padding:8px; text-align:center; border-radius:0 20px 0 0;"> Start Time</th>
                             </tr>
                         </thead>
                         <tbody style="text-align: center;">
-                            <tr style="background-color:#e2f2e7;">
+                            <tr style="background-color:hsl(139, 38%, 92%, 0.6);">
                                 <td style="padding:8px;">Sundays</td>
                                 <td style="padding:8px;">Celebration Service</td>
                                 <td style="padding:8px;">9:00 AM</td>
                             </tr>
-                            <tr style="background-color:#d9f5db;">
+                            <tr style="background-color:hsl(124, 58%, 91%, 0.6);">
                                 <td style="padding:8px;">Mondays</td>
                                 <td style="padding:8px;">Prayer Meeting</td>
                                 <td style="padding:8px;">4:00 PM</td>
                             </tr>
-                            <tr style="background-color:#e2f2e7">
+                            <tr style="background-color:hsl(139, 38%, 92%, 0.6)">
                                 <td style="padding:8px;">Wednesdays</td>
                                 <td style="padding:8px;">Bible Study</td>
                                 <td style="padding:8px;">4:30 PM</td>
                             </tr>
-                            <tr style="background-color:#d9f5db;">
+                            <tr style="background-color:hsl(124, 58%, 91%, 0.6);">
                                 <td style="padding:8px;">First Friday of the Month</td>
                                 <td style="padding:8px;">Vigil Night Service</td>
                                 <td style="padding:8px;">10:00 PM</td>
@@ -1181,7 +1108,8 @@
                         &copy; 2025 Jesus Breeds Ministries.  All rights reserved.
                     </p>
                      <p style="bottom-top:4px;color: rgb(183, 173, 158);">
-                Designed with <img src="Beating heart.webp" style="color:rgb(255, 0, 0); width: 1.0em;vertical-align:middle;"><span style="font-size:1.0em;vertical-align:middle;"> in <img src="Nigerian flag.webp" alt="Nigerian flag" style="width: 1.0em;vertical-align:middle;"></span> by Concept Tréma.
+                    Designed with <img src="Beating heart.webp" style="color:rgb(255, 0, 0); width: 1.0em;vertical-align:middle;"><span style="font-size:1.0em;vertical-align:middle;"> in <img src="Nigerian flag.webp" alt="Nigerian flag" style="width: 1.0em;vertical-align:middle;"></span> by <a  style="color:goldenrod; text-decoration:none; "href="mailto:info@trema.com.ng">Concept Tréma.</a>
+                     </p>
                 </p>
           </div>
         </footer>

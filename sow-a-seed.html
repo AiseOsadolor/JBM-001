@@ -11,19 +11,14 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
         <style>
-           @media screen and (max-width: 1600px){}
             
-            
-          
-           body header main nav strong div ul li form {
-                margin: 0;
-                padding: 0;
-           }
            body {
-                max-width: 100%;
-                max-height: 100%;
+                font-family: Helvetica, Verdana,sans-serif;
+                background-color: #E8F5E9;
+                margin: 0;
             }
-           header nav strong {
+
+            nav strong {
                 background-color: #5d625e;
                 position: relative;
                 width: 100%;
@@ -36,7 +31,7 @@
             }
           
             .main-nav {
-                width: 46%;
+                width: 48%;
                 margin: 10px auto;
                 justify-content: space-between;
                 align-items: flex-start;
@@ -50,65 +45,67 @@
                 display: inline-block;
             }
             .search-container {
-                width: 46%;
-                margin: 0 auto;
-                padding: 0 auto;
-                position: relative;
-            }
-            .search-container ul {
-                list-style-type: none;
+                width: 48%;
                 margin: 0;
                 padding: 0;
                 position: relative;
-               
             }
-           .search-box {
+            .search-box {
                 position: absolute;
-                width: 40%;
-                top: 5px;
+                width: 50%;
+                top: 15px;
                 border-radius: 20px;
                 border: 1px transparent white;
-                left: 50%;
+                left: 30px;
             }
-            #darkModeToggle{
-                width: 4%;
-            }
-            .search-box input[type="text"] {
-                width: 80%;
-                padding: 12px;
-                border-radius: 20px;
-                border: 1px solid white;
-                top: 10px;
-                left: 17%;
-        
-            }
-
             .search-button {
                 position: absolute;
                 background-color: transparent;
-                right: 50px;
+                right: 45px;
                 top: 8px;
                 border: none;
                 opacity:0;
                 pointer-events: none;
             }
+            #darkModeToggle{
+                width: 5%;
+                background-color: transparent;
+                border: none;
+                position: absolute;
+                margin-right: 20px;
+                top: 15px;
+            }
+            .search-box input[type="text"] {
+                width: 50%;
+                padding: 15px;
+                border: none;
+                border-radius: 20px;
+                outline: none;
+                transition: width 0.4s ease-in-out;
+            }
+             .search-box input:focus {
+                width: 80%;
+             }
+            div.search-container > #darkModeToggle {
+                position: absolute;
+                right: 5px;
+                bottom: 8.5px;
+                background-color: transparent;
+                border: none;
+                color: hwb(43 13% 15%);
+                font-size: 20px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
             
-            #darkModeToggle:hover {
-                background-color: hsl(0, 0%, 50%, 0.91);
-                border-radius: 60px;
-            }
-            main {
-                position: relative;
-                padding: 20px;
-                margin-top: 10px; /* Adjust for fixed nav height */
-            }
+            
             main div {
                 text-align: center;
                 margin: 0 auto;
                 max-width: 100%;
             }
             .main-nav ul {
-                white-space: normal;
+                width: 100%;
             }
           
             .main-nav li a {
@@ -142,7 +139,7 @@
                 color: black;
             }
 
-           div.search-container > #darkModeToggle {
+            div.search-container > #darkModeToggle {
                 position: absolute;
                 right: 0.1%;
                 bottom: 17px;
@@ -153,11 +150,7 @@
                 cursor: pointer;
                 transition: background-color 0.3s ease;
             }
-            #darkModeToggle:hover {
-                background-color: hsl(0, 0%, 50%, 0.5);
-                border-radius: 60px;
-            }
-          
+
             #sow-seed-button {
                 position:absolute;
                 background-color: #a8ebad;
@@ -177,12 +170,13 @@
             }
             main {
                max-width: 100%;
-               max-height:100%;
-               width: 1200px;
+               max-height:auto;
                margin: 20px auto;
                padding: 0 40px;
                box-sizing: border-box;
                position: relative;
+               margin-top: -30px; /* Adjust for fixed nav height */
+            
             }
            
             div.donation-form-container {
@@ -194,6 +188,7 @@
                 position: relative;
                 display: block;
             }
+        
             form#donation-form label[for] {
                 position: absolute;
                 font-weight: bold;
@@ -214,20 +209,6 @@
                 right:10%;
 
             }  
-           .main-nav li a {
-                float: left;
-                border: 1px none grey;
-                padding: 10px;
-                border-radius: 20px;
-                color: goldenrod;
-                text-decoration: none;
-            }
-            
-            .main-nav li a:hover {
-                background-color: transparent;
-                color: white;
-            }
-
             form input:focus, form textarea:focus {
                 border: 1.5px solid rgb(91, 91, 160);
                 outline: none;
@@ -273,12 +254,7 @@
                 white-space: wrap;
             }
            
-            body {
-                font-family: Helvetica, Verdana,sans-serif;
-                background-color: #E8F5E9;
-                margin: 0;
-                padding: 0;
-            }
+    
             .footer-links, .social-links{
                 display: flex;
                 justify-content: center;
@@ -302,14 +278,7 @@
                 left: 0;
                 right: 0;
             }
-            nav {
-                background-color: #5d625e;
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                z-index: 1000;
-            }   
+            
             /* Add this to your <style> block or styles.css */
             .drop-cap::first-letter {
                 float: left;
@@ -381,10 +350,6 @@
                 border: 1px solid hsl(51, 100%, 50%, 0.5) !important;
             }
 
-            body.dark-mode #darkModeToggle:hover {
-                background-color: hsl(0, 0%, 50%, 0.5)  !important;
-                border-radius: 60px !important;
-            }
             body.dark-mode button:hover {
                 background-color: #222 !important;
                 color: #ffd700 !important;
@@ -477,27 +442,29 @@
             }
             }
 
-            @media screen and (max-width: 593px) {
+           @media screen and (max-width: 575px) {
             nav strong {
+                margin-top: 0;
+                margin-left: 0;
+                margin-right: 0;
                 display: block;
                 background-color: #5d625e;
                 width: 100%;
-                height: 40%;
-                top: 0;
-                left: 0;
-                right: 0;
+                height: auto;
                 z-index: 1;
                 position: fixed;
                 align-items: center;
                 
             }
             div.main-nav {
-                width: 60%;
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
                 align-items: center;
-                margin: 5px 0;
+                
             }
             .search-container {
-                width: 40%;
+                width: 100%;
                 position: relative;
                 padding: 0;
                 margin: 5px 0;
@@ -505,9 +472,11 @@
             }
             
             div.main-nav ul {
+                margin-left: 0;
+                margin-right: 0;
                 width: 100%;
                 list-style-type: none;
-                padding: 20px;
+                padding: 0;
                 border: 0;
                 
             }
@@ -528,187 +497,27 @@
                 
             }
             .main-nav li:last-child {
-                margin-bottom: 0;
-                border-bottom: 0;
-                padding-bottom: 0;
+                margin-bottom: 30px;
+                border-bottom: 30px;
+                padding-bottom: 30px;
             }
             .search-container {
             
+                width: 100%;
                 position: relative;
                 padding: 0;
                 height: auto;
                 
             }
             .search-box {
+                position: absolute;
                 width: 50%;
-                top: -35px;
+                top: -43px;
                 margin-right: 5%;
             }
             #darkModeToggle {
-                margin-right: 50px;
-                top: -100px;
-            }
-            body {
-                position: relative;
-            }
-            main  {
-                position: relative;
-                margin-top: 25%;
-                width: 100%;
-            }
-            }
-            
-            @media screen and (max-width: 480px) {
-            nav strong {
-                display: block;
-                background-color: #5d625e;
-                width: 100%;
-                height: 40%;
-                top: 0;
-                left: 0;
-                right: 0;
-                z-index: 1;
-                position: fixed;
-                align-items: center;
-                
-            }
-            div.main-nav {
-                width: 60%;
-                align-items: center;
-                margin: 5px 0;
-            }
-            .search-container {
-                width: 40%;
-                position: relative;
-                padding: 0;
-                margin: 5px 0;
-                
-            }
-            
-            div.main-nav ul {
-                width: 100%;
-                list-style-type: none;
-                padding: 20px;
-                border: 0;
-                
-            }
-            .main-nav li {
-                display: block;
-                align-items: center;
-                text-align: center;
-                margin-bottom: 12px;
-            }
-                
-            .main-nav li a {
-                float: none;
-                border: 1px none grey;
-                padding: 10px;
-                color: goldenrod;
-                text-decoration: none;
-                font-size: 1.5em;
-                
-            }
-            .main-nav li:last-child {
-                margin-bottom: 0;
-                border-bottom: 0;
-                padding-bottom: 0;
-            }
-            .search-container {
-            
-                position: relative;
-                padding: 0;
-                height: auto;
-                
-            }
-            .search-box {
-                width: 50%;
-                top: -35px;
-                margin-right: 5%;
-            }
-            #darkModeToggle {
-                margin-right: 50px;
-                top: -100px;
-            }
-            body {
-                position: relative;
-            }
-            main  {
-                position: relative;
-                margin-top: 30%;
-                width: 100%;
-            }
-
-            }
-         @media screen and (max-width: 400px) {
-            nav strong {
-                display: block;
-                background-color: #5d625e;
-                width: 100%;
-                height: 40%;
-                top: 0;
-                left: 0;
-                right: 0;
-                z-index: 1;
-                position: fixed;
-                align-items: center;
-                
-            }
-            div.main-nav {
-                width: 60%;
-                align-items: center;
-                margin: 5px 0;
-            }
-            .search-container {
-                width: 40%;
-                position: relative;
-                padding: 0;
-                margin: 5px 0;
-                
-            }
-            
-            div.main-nav ul {
-                width: 100%;
-                list-style-type: none;
-                padding: 20px;
-                border: 0;
-                
-            }
-            .main-nav li {
-                display: block;
-                align-items: center;
-                text-align: center;
-                margin-bottom: 12px;
-            }
-                
-            .main-nav li a {
-                float: none;
-                border: 1px none grey;
-                padding: 10px;
-                color: goldenrod;
-                text-decoration: none;
-                font-size: 1.5em;
-                
-            }
-            .main-nav li:last-child {
-                margin-bottom: 0;
-                border-bottom: 0;
-                padding-bottom: 0;
-            }
-            .search-container {
-            
-                position: relative;
-                padding: 0;
-                height: auto;
-                
-            }
-            .search-box {
-                width: 50%;
-                top: -35px;
-                margin-right: 5%;
-            }
-            #darkModeToggle {
-                margin-right: 50px;
-                top: -100px;
+                top: -40px;
+                margin-right: 20px;
             }
             body {
                 position: relative;
@@ -716,6 +525,183 @@
             main  {
                 position: relative;
                 margin-top: 35%;
+                width: 100%;
+            }
+
+            }
+
+            @media screen and (max-width: 480px) {
+             nav strong {
+                margin-top: 0;
+                margin-left: 0;
+                margin-right: 0;
+                display: block;
+                background-color: #5d625e;
+                width: 100%;
+                height: auto;
+                z-index: 1;
+                position: fixed;
+                align-items: center;
+                
+            }
+            div.main-nav {
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+                align-items: center;
+                
+            }
+            .search-container {
+                width: 100%;
+                position: relative;
+                padding: 0;
+                margin: 5px 0;
+                
+            }
+            
+            div.main-nav ul {
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+                list-style-type: none;
+                padding: 0;
+                border: 0;
+                
+            }
+            .main-nav li {
+                display: block;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 12px;
+            }
+                
+            .main-nav li a {
+                float: none;
+                border: 1px none grey;
+                padding: 10px;
+                color: goldenrod;
+                text-decoration: none;
+                font-size: 1.5em;
+                
+            }
+            .main-nav li:last-child {
+                margin-bottom: 30px;
+                border-bottom: 30px;
+                padding-bottom: 30px;
+            }
+            .search-container {
+            
+                width: 100%;
+                position: relative;
+                padding: 0;
+                height: auto;
+                
+            }
+            .search-box {
+                position: absolute;
+                width: 50%;
+                top: -43px;
+                margin-right: 5%;
+            }
+            #darkModeToggle {
+                top: -40px;
+                margin-right: 20px;
+            }
+            body {
+                position: relative;
+            }
+            main  {
+                position: relative;
+                margin-top: 35%;
+                width: 100%;
+            }
+
+            }
+            
+           
+            @media screen and (max-width: 400px) {
+            nav strong {
+                margin-top: 0;
+                margin-left: 0;
+                margin-right: 0;
+                display: block;
+                background-color: #5d625e;
+                width: 100%;
+                height: auto;
+                z-index: 1;
+                position: fixed;
+                align-items: center;
+                
+            }
+            div.main-nav {
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+                align-items: center;
+                
+            }
+            .search-container {
+                width: 100%;
+                position: relative;
+                padding: 0;
+                margin: 5px 0;
+                
+            }
+            
+            div.main-nav ul {
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+                list-style-type: none;
+                padding: 0;
+                border: 0;
+                
+            }
+            .main-nav li {
+                display: block;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 12px;
+            }
+                
+            .main-nav li a {
+                float: none;
+                border: 1px none grey;
+                padding: 10px;
+                color: goldenrod;
+                text-decoration: none;
+                font-size: 1.5em;
+                
+            }
+            .main-nav li:last-child {
+                margin-bottom: 30px;
+                border-bottom: 30px;
+                padding-bottom: 30px;
+            }
+            .search-container {
+            
+                width: 100%;
+                position: relative;
+                padding: 0;
+                height: auto;
+                
+            }
+            .search-box {
+                position: absolute;
+                width: 50%;
+                top: -43px;
+                margin-right: 5%;
+            }
+            #darkModeToggle {
+                top: -40px;
+                margin-right: 20px;
+            }
+            body {
+                position: relative;
+            }
+            main  {
+                position: relative;
+                margin-top: 40%;
                 width: 100%;
             }
 
@@ -813,7 +799,7 @@
                     </p>
                </p>
                      <p style="color: rgb(183, 173, 158);">
-                Designed with <img src="Beating heart.webp" style="color:#ff0000; width: 1.0em;vertical-align:middle;"><span style="font-size:1.0em;vertical-align:middle;"> in <img src="Nigerian flag.webp" alt="Nigerian flag" style="width: 1.0em;vertical-align:middle;"></span> by Concept Tréma.
+                Designed with <img src="Beating heart.webp" style="color:#ff0000; width: 1.0em;vertical-align:middle;"><span style="font-size:1.0em;vertical-align:middle;"> in <img src="Nigerian flag.webp" alt="Nigerian flag" style="width: 1.0em;vertical-align:middle;"></span> by <a  style="color:goldenrod; text-decoration:none; "href="mailto:info@trema.com.ng">Concept Tréma.</a>
                 </p>
           </div>
         </footer>

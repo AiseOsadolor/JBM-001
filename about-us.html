@@ -14,12 +14,13 @@
         </script>
 
         <style>
-           body {
+            body {
                 font-family: Helvetica, Verdana,sans-serif;
                 background-color: #E8F5E9;
                 margin: 0;
-           }
-          nav strong {
+            }
+
+            nav strong {
                 background-color: #5d625e;
                 position: relative;
                 width: 100%;
@@ -32,7 +33,7 @@
             }
           
             .main-nav {
-                width: 46%;
+                width: 48%;
                 margin: 10px auto;
                 justify-content: space-between;
                 align-items: flex-start;
@@ -46,17 +47,18 @@
                 display: inline-block;
             }
             .search-container {
-                width: 46%;
-                margin: 10px auto;
-                padding: 10px;
+                width: 48%;
+                margin: 0;
+                padding: 0;
                 position: relative;
             }
-           .search-box {
+            .search-box {
                 position: absolute;
-                width: 40%;
-                top: 3px;
+                width: 50%;
+                top: 15px;
                 border-radius: 20px;
-                right: 20px;
+                border: 1px transparent white;
+                left: 5%;
             }
             .search-button {
                 position: absolute;
@@ -67,7 +69,7 @@
                 opacity:0;
                 pointer-events: none;
             }
-           div.search-container > #darkModeToggle {
+            div.search-container > #darkModeToggle {
                 position: absolute;
                 right: 5px;
                 bottom: 8.5px;
@@ -90,7 +92,7 @@
                 margin-left: auto;
                 margin-right: auto;
             }
-            main section#about-us, main section#our-vision {
+            main section#our-vision {
                 width: 70%;
                 line-height: 1.5;
                 margin: 5px 15%;
@@ -98,40 +100,33 @@
                 font-weight: 400;
                 margin-bottom: 20px;
                 display: block;
-                
-                
+                align-items: center;
+                position: relative;
             }
-            main section#about-us, main section#our-vision > p {
+
+            main section#our-vision > p {
                 font-family: Helvetica, Verdana, sans-serif;
                 font-size: 1.2em;
                 text-wrap: wrap;
                 text-align-last: left;
                 text-align: justify;
             }
+            main section {
+                position: relative;
+            }
+            main section h2 { 
+                clear: both;
+                text-align: center;
+                color: goldenrod;
+                position: relative;
+                font-size: 24px;
+                margin-bottom: 10px;
+    
+    
+                
+            }
 
-            main section#about-us h2 { 
-                color: goldenrod;
-                display: block;
-                margin-left: 38%;
-                font-size: 24px;
-                margin-bottom: 10px;
-                text-align: center;
-                text-wrap: nowrap;
-                width: 100%;  
-                
-            }
-            main section#our-vision h2 {
-                color: goldenrod;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                font-size: 24px;
-                margin-bottom: 10px;
-                text-align: center;
-                text-wrap: nowrap;
-                width: 100%;
-                
-            }
+
             main h2.heading-text {
                 font-size: 1.5em;
                 font-weight: bold;
@@ -140,15 +135,20 @@
                 text-align: center;
                 white-space: wrap;
              }
-            
-            #about-us img {
+           
+
+            main section#our-vision img {
+                width: 50%;
+                height: 50%;
                 max-width: 70%;
                 max-height: 70%;
                 display: block;
-                margin: 0 auto;
-                position: relative;
+                margin-left: 25%;
+                margin-right: 25%;
+                align-self: center;
+              
             }
-            #about-us img:hover {
+            #our-vision img:hover {
                 transform: scale(1.05);
                 transition: transform 0.3s ease;
             }
@@ -157,32 +157,29 @@
                 background-color: transparent;
                 color: white;
             }
-              form input:focus, form textarea:focus {
-                border: 1.5px solid rgb(91, 91, 160);
-                outline: none;
-            }
-            
-            form input:valid, form textarea:valid {
-                border: 1.5px solid rgb(67, 211, 127);
-                outline: none;
-            }
+
             #tnb-google-search-input:focus {
-                border: 1.5px solid rgb(98, 98, 197);
-                outline: none;
+                border: 2px solid rgb(98, 98, 197);
+                outline: rgb(98, 98, 197);
+                width: 100%;
+
             }
-            #tnb-google-search-input:valid {
-                border: 1.5px solid rgb(67, 211, 127);
-                outline: none;
-            }
+          
             input[type="text"] {
                 width: 80%;
                 padding: 10px;
                 border: none;
                 border-radius: 20px;
                 outline: none;
+                transition: width 0.4s ease-in-out;
             }
             #darkModeToggle {
-                width: 4%;
+                width: 5%;
+                background-color: transparent;
+                border: none;
+                position: relative;
+                margin-right: 5px;
+                top: 15px;
             }
            .main-nav li a {
                 float: left;
@@ -229,7 +226,6 @@
                 padding: 10px 0;
                 text-align: center;
                 position: relative;
-
             }
             
              /* Dark mode style */
@@ -245,9 +241,7 @@
             body.dark-mode label[for] {
                 color: #ffd700 !important;
             }
-            body.dark-mode main,
-            body.dark-mode .main-images,
-            body.dark-mode .images {
+            body.dark-mode main {
                 background-color: #23272b !important;
                 color: #e0e0e0 !important;
                 box-shadow: 0 2px 8px rgba(0,0,0,0.3);
@@ -289,28 +283,13 @@
                 border: 1px solid hsl(51, 100%, 50%, 0.5) !important;
             }
 
-            body.dark-mode #darkModeToggle:hover {
-                background-color: hsl(0, 0%, 50%, 0.5)  !important;
-                border-radius: 60px !important;
-            }
-            body.dark-mode .send-message-button,
-            body.dark-mode .send-comment-button {
-                background-color: #333 !important;
-                color: #ffd700 !important;
-                border: 1px solid #ffd700 !important;
-            }
-            body.dark-mode button:hover,
-            body.dark-mode .send-message-button:hover,
-            body.dark-mode .send-comment-button:hover {
-                background-color: #222 !important;
-                color: #fff !important;
-            }
             body.dark-mode a {
                 color: #ffd700 !important;
             }
             body.dark-mode a:hover {
                 color: #fff !important;
             }
+      
             @media screen and (max-width: 806px) {
             nav strong {
                 background-color: #5d625e;
@@ -332,46 +311,6 @@
             }
             .main-nav ul {
                 list-style-type: none;
-                margin-left: 20px;
-                padding: 0;
-            }
-            .main-nav li {
-                display: inline-block;
-            }
-            .search-container {
-                width: 40%;
-            }
-            .search-box {
-                width: 30%;
-                margin-right: 30px;
-            }
-            #darkModeToggle {
-                width: 8%;
-               margin-right: 15px;
-            }
-            }
-            @media screen and (max-width: 806px) {
-            nav strong {
-                background-color: #5d625e;
-                width: 100%;
-                max-height: auto;
-                top: 0;
-                left: 0;
-                right: 0;
-                z-index: 1000;
-                display: flex;
-            }
-                
-            .main-nav {
-                width: 60%;
-                margin: 10px auto;
-                justify-content: space-between;
-                align-items: flex-start;
-                    
-            }
-            .main-nav ul {
-                list-style-type: none;
-                margin-left: 20px;
                 padding: 0;
             }
             .main-nav li {
@@ -411,7 +350,6 @@
             }
             .main-nav ul {
                 list-style-type: none;
-                margin-left: 15px;
                 padding: 0;
             }
             .main-nav li {
@@ -436,7 +374,8 @@
             nav strong {
                 background-color: #5d625e;
                 width: 100%;
-                height: 40%;
+                height: auto;
+                max-height: 40%;
                 top: 0;
                 left: 0;
                 right: 0;
@@ -451,7 +390,7 @@
             }
             .main-nav ul {
                 list-style-type: none;
-                padding: 20px;
+                padding: 0;
                 border: 0;
             }
             .main-nav li {
@@ -471,25 +410,28 @@
                 
             }
             .main-nav li:last-child {
-                margin-bottom: 0;
-                border-bottom: 0;
-                padding-bottom: 0;
+                margin-bottom: 30px;
+                border-bottom: 30px;
+                padding-bottom: 20px;
             }
             .search-container {
                 width: 100%;
                 display: block;
                 align-items: center;
                 position: relative;
+
             }
             .search-box {
                 width: 50%;
-                position: relative;
+                position: absolute;
                 left: 20px;
+                top: -40px;
             }
             #darkModeToggle {
                 width: 10%;
-                position: relative;
-                margin-right: 15%;
+                position: absolute;
+                margin-right: 10px;
+                top: -30px;
                 
             }
             body {
@@ -497,14 +439,15 @@
             }
             main  {
                 position: relative;
-                margin-top: 50%;
+                margin-top: 35%;
             }
             }
+
             @media screen and (max-width: 526px) {
             nav strong {
                 background-color: #5d625e;
                 width: 100%;
-                height: 40%;
+                height: auto;
                 top: 0;
                 left: 0;
                 right: 0;
@@ -519,7 +462,7 @@
             }
             .main-nav ul {
                 list-style-type: none;
-                padding: 20px;
+                padding: 0;
                 border: 0;
             }
             .main-nav li {
@@ -539,9 +482,9 @@
                 
             }
             .main-nav li:last-child {
-                margin-bottom: 0;
-                border-bottom: 0;
-                padding-bottom: 0;
+                margin-bottom: 30px;
+                border-bottom: 30px;
+                padding-bottom: 20px;
             }
             .search-container {
                 width: 100%;
@@ -551,13 +494,15 @@
             }
             .search-box {
                 width: 50%;
-                position: relative;
+                position: absolute;
                 left: 20px;
+                top: -40px;
             }
             #darkModeToggle {
                 width: 10%;
-                position: relative;
-                margin-right: 15%;
+                position: absolute;
+                margin-right: 10px;
+                top: -30px;
                 
             }
             body {
@@ -565,84 +510,15 @@
             }
             main  {
                 position: relative;
-                margin-top: 50%;
+                margin-top: 38%;
             }
             }
 
-            @media screen and (max-width: 483px) {
-            nav strong {
-                background-color: #5d625e;
-                width: 100%;
-                height: 37%;
-                top: 0;
-                left: 0;
-                right: 0;
-                z-index: 1;
-                display: block;
-                position: fixed;
-            }
-            .main-nav {
-                width: 100%;
-                margin: 5px auto;
-                position: relative;
-            }
-            .main-nav ul {
-                list-style-type: none;
-                padding: 20px;
-                border: 0;
-            }
-            .main-nav li {
-                display: block;
-                align-items: center;
-                text-align: center;
-                margin-bottom: 12px;
-            }
-                
-            .main-nav li a {
-                float: none;
-                border: 1px none grey;
-                padding: 10px;
-                color: goldenrod;
-                text-decoration: none;
-                font-size: 1.5em;
-                
-            }
-            .main-nav li:last-child {
-                margin-bottom: 0;
-                border-bottom: 0;
-                padding-bottom: 0;
-            }
-            .search-container {
-                width: 100%;
-                display: block;
-                align-items: center;
-                position: relative;
-            }
-            .search-box {
-                width: 50%;
-                position: relative;
-                left: 20px;
-            }
-            #darkModeToggle {
-                width: 10%;
-                position: relative;
-                margin-right: 15%;
-                
-            }
-            body {
-                position: relative;
-            }
-            main  {
-                position: relative;
-                margin-top: 50%;
-            }
-            }
-            
             @media screen and (max-width: 434px) {
             nav strong {
                 background-color: #5d625e;
                 width: 100%;
-                height: 40%;
+                height: auto;
                 top: 0;
                 left: 0;
                 right: 0;
@@ -657,7 +533,7 @@
             }
             .main-nav ul {
                 list-style-type: none;
-                padding: 20px;
+                padding: 0;
                 border: 0;
             }
             .main-nav li {
@@ -677,24 +553,28 @@
                 
             }
             .main-nav li:last-child {
-                margin-bottom: 0;
-                border-bottom: 0;
-                padding-bottom: 0;
+                margin-bottom: 30px;
+                border-bottom: 30px;
+                padding-bottom: 20px;
             }
             .search-container {
+                background-color:  #5d625e;
                 width: 100%;
                 display: block;
                 position: relative;
+                
             }
-            .search-box {
+          .search-box {
                 width: 50%;
-                position: relative;
+                position: absolute;
                 left: 20px;
+                top: -40px;
             }
             #darkModeToggle {
                 width: 10%;
-                position: relative;
-                margin-right: 15%;
+                position: absolute;
+                margin-right: 10px;
+                top: -30px;
                 
             }
             body {
@@ -756,30 +636,29 @@
        <br>
        <main>
             <h2 class="heading-text"> Welcome to the <i>About Us</i> page of Jesus Breeds Ministries. </h2> 
-           <br> 
-         <section id="about-us">
-            <h2>About Us</h2>
-            <p>
-                Jesus Breeds is a non-profit organization dedicated to spreading the message of love, hope, and faith through various community outreach programs and initiatives. Our mission is to empower individuals and families to lead fulfilling lives rooted in Christian values.
-            </p> <br>
-         
-            <h2 >Our Founder</h2>
-            <img src="Bishop.png" width="200" height="200" style="border-radius: 10px;" alt="Bishop Eddy Omoruyi-Okundaye" title="Bishop Eddy Omoruyi-Okundaye">
-            <p>
-               <br> Jesus Breeds was founded in 1996 by <b>Bishop Eddy Omoruyi-Okundaye </b> , a visionary leader with a passion for spreading the gospel and transforming lives.
+            <br> 
+          <section id="our-vision">
+             <h2>About Us</h2>
+                <p>
+                    Jesus Breeds is a non-profit organization dedicated to spreading the message of love, hope, and faith through various community outreach programs and initiatives. Our mission is to empower individuals and families to lead fulfilling lives rooted in Christian values.
+                </p> <br>
+            
+                <h2>Our Founder</h2>
+
+                <img src="Bishop.png" width="200" max-height="300" style="border-radius: 10px; align-self: center;" alt="Bishop Eddy Omoruyi-Okundaye" title="Bishop Eddy Omoruyi-Okundaye">
+            
+                <p>
+                Jesus Breeds was founded in 1996 by <b>Bishop Eddy Omoruyi-Okundaye </b> , a visionary leader with a passion for spreading the gospel and transforming lives.
                 With over 20 years of ministry experience, Bishop Omoruyi has dedicated his life to serving God and empowering communities through faith, love, and service.
-            </p>
-         </section>
-         <!-- Our Vision Section -->
-         <section id="our-vision">
+                </p> <br>
             <h2>Our Vision</h2>
             <p>
-                Our vision is to create a world where every individual experiences the transformative power of Jesus Christ. We strive to build a community that reflects God's love and grace, fostering spiritual growth and meaningful connections among all people.
-            </p>
+                    Our vision is to create a world where every individual experiences the transformative power of Jesus Christ. We strive to build a community that reflects God's love and grace, fostering spiritual growth and meaningful connections among all people.
+            </p> <br>
             <h2>Our Statement of Faith</h2>
             <p>
-                We believe in the authority of Scripture, the power of prayer, and the importance of community. Our faith is rooted in the teachings of Jesus Christ, and we are committed to living out His message of love and redemption.
-            </p>
+                    We believe in the authority of Scripture, the power of prayer, and the importance of community. Our faith is rooted in the teachings of Jesus Christ, and we are committed to living out His message of love and redemption.
+            </p> <br>
          </section>
     </main>
         <script src="script.js"></script>
@@ -805,8 +684,9 @@
                         &copy; 2025 Jesus Breeds Ministries.  All rights reserved.
                     </p>
                  </p>
-                     <p style="bottom-top:4px;color: rgb(183, 173, 158);">
-                Designed with <img src="Beating heart.webp" style="color:#ff0000; width: 1.0em;vertical-align:middle;"><span style="font-size:1.0em;vertical-align:middle;"> in <img src="Nigerian flag.webp" alt="Nigerian flag" style="width: 1.0em;vertical-align:middle;"></span> by Concept Tréma.
+                    <p style="bottom-top:4px;color: rgb(183, 173, 158);">
+                 Designed with <img src="Beating heart.webp" style="color:#ff0000; width: 1.0em;vertical-align:middle;"><span style="font-size:1.0em;vertical-align:middle;"> in <img src="Nigerian flag.webp" alt="Nigerian flag" style="width: 1.0em;vertical-align:middle;"></span> <a  style="color:goldenrod; text-decoration:none; "href="mailto:info@trema.com.ng">Concept Tréma.</a>
+             
                 </p>
           </div>
         </footer>
