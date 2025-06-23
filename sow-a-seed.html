@@ -83,10 +83,10 @@
                 outline: none;
                 transition: width 0.4s ease-in-out;
             }
-             .search-box input:focus {
+            .search-box input:focus {
                 width: 80%;
              }
-            div.search-container > #darkModeToggle {
+            #darkModeToggle {
                 position: absolute;
                 right: 5px;
                 bottom: 8.5px;
@@ -139,17 +139,6 @@
                 color: black;
             }
 
-            div.search-container > #darkModeToggle {
-                position: absolute;
-                right: 0.1%;
-                bottom: 17px;
-                background-color: transparent;
-                border: none;
-                color: hwb(43 13% 15%);
-                font-size: 20px;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-            }
 
             #sow-seed-button {
                 position:absolute;
@@ -339,7 +328,7 @@
                 border: 1px solid hwb(43 13% 15%, 0.5) !important;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
             }
-            body.dark-mode button {
+            body.dark-mode #sow-seed-button {
                 background-color: #333 !important;
                 color: #fff !important;
                 border: 1px transparent  hsl(51, 100%, 50%, 0.5)  !important;
@@ -349,8 +338,9 @@
                 color: #ffffff !important;
                 border: 1px solid hsl(51, 100%, 50%, 0.5) !important;
             }
-
-            body.dark-mode button:hover {
+        
+    
+            body.dark-mode  #sow-seed-button:hover {
                 background-color: #222 !important;
                 color: #ffd700 !important;
             }
